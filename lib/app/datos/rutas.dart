@@ -45,11 +45,12 @@ Marker markerIX = const Marker(
     markerId: MarkerId('marker'),
     position: LatLng(14.944155, -92.256285),
     infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA XOCHIMILCO"));
-Marker markerRX = const Marker(
-    markerId: MarkerId('marker'),
-    position: LatLng(14.911874, -92.264891),
+Marker markerRX = Marker(
+    markerId: const MarkerId('marker'),
+    position: const LatLng(14.911874, -92.264891),
+    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
     infoWindow:
-        InfoWindow(title: "Base de Regreso", snippet: "RUTA XOCHIMILCO"));
+        const InfoWindow(title: "Base de Regreso", snippet: "RUTA XOCHIMILCO"));
 
 final List<LatLng> regreso = [
   const LatLng(14.911874, -92.264891),
