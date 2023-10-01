@@ -28,7 +28,6 @@ class _HomePageState extends State<HomePage> {
       tilt: 59.440717697143555,
       zoom: 19.151926040649414);
 
-  // ignore: unused_element
   // NO SE TOCA
   Future<Object> _requestLocationPermission() async {
     LocationPermission permission;
@@ -46,7 +45,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // _requestLocationPermission();
+    _requestLocationPermission();
     // _addPolyline(); // Agregar la ruta al mapa
     super.initState();
   }
