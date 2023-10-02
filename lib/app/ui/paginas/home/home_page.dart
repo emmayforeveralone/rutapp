@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:rutapp/app/datos/rutas.dart';
+import 'package:rutapp/app/datos/ruta3.dart';
+import 'package:rutapp/app/datos/ruta1.dart';
+import 'package:rutapp/app/datos/ruta2.dart';
+import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +19,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final Completer<GoogleMapController> _controller = Completer();
+  String? _combiSeleccionada;
 
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(14.90385, -92.25749),
@@ -56,20 +60,49 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text("RUT-APP"),
       ),
-      body: GoogleMap(
-        zoomControlsEnabled: false,
-        myLocationButtonEnabled: true,
-        myLocationEnabled: true,
-        mapType: MapType.normal,
-        initialCameraPosition: _kGooglePlex,
-        onMapCreated: (GoogleMapController controller) {
-          _controller.complete(controller);
-        },
-        polylines: {...polylineIdaXochi, ...polylineRegreXochi},
+      body: Column(
+        children: [
+          DropdownButtonFormField<String>(
+            value: _combiSeleccionada,
+            onChanged: (newValue) {
+              setState(() {
+                _combiSeleccionada = newValue;
+              });
+            },
+            items: listaDeCombis.map((combi) {
+              return DropdownMenuItem<String>(
+                value: combi.nombre,
+                child: Text(combi.nombre),
+              );
+            }).toList(),
+            decoration: const InputDecoration(
+              labelText: 'Selecciona una Combi',
+            ),
+          ),
+          Expanded(
+            child: GoogleMap(
+              zoomControlsEnabled: false,
+              myLocationButtonEnabled: true,
+              myLocationEnabled: true,
+              mapType: MapType.normal,
+              initialCameraPosition: _kGooglePlex,
+              onMapCreated: (GoogleMapController controller) {
+                _controller.complete(controller);
+              },
+              polylines: {
+                if (_combiSeleccionada != null)
+                  ...listaDeCombis
+                      .firstWhere((combi) => combi.nombre == _combiSeleccionada,
+                          orElse: () => Combi('', {}))
+                      .ruta,
+              },
 
-        markers: {...markerXochi},
+              markers: {...markerXochi, ...markerRuta2, ...markerRuta3},
 
-        //polylines: //_polylines,
+              //polylines: //_polylines,
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _goToTheLake,
