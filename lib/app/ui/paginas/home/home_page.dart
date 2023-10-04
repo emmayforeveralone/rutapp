@@ -8,6 +8,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
+import 'package:rutapp/app/datos/ruta5.dart';
 import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
@@ -97,7 +98,12 @@ class _HomePageState extends State<HomePage> {
                       .ruta,
               },
 
-              markers: {...markerXochi, ...markerRuta2, ...markerRuta3},
+              markers: {
+                ...markerXochi,
+                ...markerRuta2,
+                ...markerRuta3,
+                ...markerRuta5
+              },
 
               //polylines: //_polylines,
             ),
