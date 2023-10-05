@@ -9,6 +9,7 @@ import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
 import 'package:rutapp/app/datos/ruta5.dart';
+import 'package:rutapp/app/datos/ruta6.dart';
 import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
@@ -102,7 +103,8 @@ class _HomePageState extends State<HomePage> {
                 ...markerXochi,
                 ...markerRuta2,
                 ...markerRuta3,
-                ...markerRuta5
+                ...markerRuta5,
+                ...markerRuta6
               },
 
               //polylines: //_polylines,
