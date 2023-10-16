@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta6,
                 ...markerRuta7,
                 ...markerRuta8,
-                // ...markerRuta9,
+                ...markerRuta9,
               },
 
               //polylines: //_polylines,
