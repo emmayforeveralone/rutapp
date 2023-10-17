@@ -193,7 +193,7 @@ List<LatLng> rutaDerecha = [
 const PolylineId polylineRuta9IDA = PolylineId("Ruta 9");
 final Polyline polylineRuta9 = Polyline(
   polylineId: polylineRuta9IDA,
-  color: Colors.red, // Color de la línea de la ruta
+  color: Colors.green, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: rutaDerecha,
 );
@@ -434,7 +434,7 @@ final Polyline polylineRuta9regre = Polyline(
 Marker markerIR = Marker(
     markerId: const MarkerId('markerIdaRUTA9'),
     position: const LatLng(14.907939959473968, -92.26580160803033),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
+    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
     infoWindow: const InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 9"));
 Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA9'),
