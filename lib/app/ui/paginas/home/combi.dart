@@ -16,6 +16,6 @@ final List<Combi> listaDeCombis = [
   Combi('RUTA XOCHIMILCO', polylineIdaXochi), // Ruta 1
   Combi('RUTA 2', polylineIDA2), // Ruta 2
   Combi('Ruta 5 de Febrero', polylineIDA3),
-  Combi('Ruta 5', polylineIDA5)
+  Combi('Ruta 5', polylineIDA5),
   // Agrega más combis según sea necesario
 ];

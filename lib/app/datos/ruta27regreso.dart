@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+List<LatLng> ruta = [
+  const LatLng(14.910933980692793, -92.26350430388831),
+  const LatLng(14.910742421467294, -92.2630897381707),
+  const LatLng(14.899228179340069, -92.27067196964927),
+  const LatLng(14.88966186493879, -92.27661064557573),
+  const LatLng(14.889037826359452, -92.27758107712863),
+  const LatLng(14.888841114986949, -92.27822711212457),
+  const LatLng(14.888128089801441, -92.28258448861638),
+  const LatLng(14.887449945238211, -92.28766984276196),
+  const LatLng(14.886847994916273, -92.2913912183309),
+  const LatLng(14.885342272542502, -92.29108138982356),
+  const LatLng(14.885014220515115, -92.29114708844483),
+  const LatLng(14.884802573780878, -92.29133688446177),
+  const LatLng(14.884654420943253, -92.29157412948298),
+  const LatLng(14.883709756396906, -92.29631862779452),
+  const LatLng(14.883402866707431, -92.29742455458562),
+  const LatLng(14.883208855758813, -92.29847208260225),
+  const LatLng(14.883274844670133, -92.29860205884343),
+  const LatLng(14.88319169612046, -92.29870448132625),
+  const LatLng(14.8824097022372, -92.30282391482886),
+  const LatLng(14.882261222068236, -92.30280138187533),
+  const LatLng(14.882290918110197, -92.30267847485614),
+  const LatLng(14.879657188718678, -92.30215656359658),
+  const LatLng(14.879583102663338, -92.3020882695826),
+  const LatLng(14.87952922187982, -92.30193216897918),
+  const LatLng(14.87944115028469, -92.3010432272154),
+  const LatLng(14.879227539744035, -92.29927257036567),
+  const LatLng(14.87668222269899, -92.29963119049859),
+  const LatLng(14.876911266658853, -92.30116057051853),
+  const LatLng(14.876883400511659, -92.30131342364137),
+  const LatLng(14.87510107848928, -92.30266854549737),
+  const LatLng(14.874514804866871, -92.30213464991374),
+  const LatLng(14.875089466432492, -92.30171739606396),
+  const LatLng(14.874924491978486, -92.30147083697786),
+  const LatLng(14.874824590719264, -92.30137410995101),
+  const LatLng(14.874787929694836, -92.30128402106011),
+  const LatLng(14.874283590982165, -92.29796035514256),
+  const LatLng(14.872672905083917, -92.29820970455079),
+  const LatLng(14.867901524894545, -92.30630582997583),
+  const LatLng(14.867922755392506, -92.30741595363237),
+  const LatLng(14.868045238986188, -92.30770320023656),
+  const LatLng(14.869215728744278, -92.30901237087704),
+  const LatLng(14.87288669762559, -92.3069569439272),
+  const LatLng(14.872006467078599, -92.3059972023314),
+  const LatLng(14.870234652735276, -92.30414996002793),
+  const LatLng(14.869370425880707, -92.30357492055575),
+  const LatLng(14.872508635981982, -92.29820356499488),
+  const LatLng(14.874387577432321, -92.2979334508644),
+  const LatLng(14.874447122686213, -92.29833607957244), // BASE DE REGRESO
+];
+
+const PolylineId polylineRuta27REGRESO = PolylineId("Ruta 27");
+final Polyline polylineRuta27 = Polyline(
+  polylineId: polylineRuta27REGRESO,
+  color: Colors.pink.shade400, // Color de la línea de la ruta
+  width: 5, // Ancho de la línea de la ruta
+  points: ruta,
+);
+Marker markerIR = const Marker(
+    markerId: MarkerId('markerRegresoRUTA27'),
+    position: LatLng(14.950402428008362, -92.25401951577824),
+    infoWindow:
+        InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 27"));
+Marker markerRR = Marker(
+    markerId: const MarkerId('markerIdaRUTA27'),
+    position: const LatLng(14.911487636284026, -92.26444684386084),
+    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+    infoWindow: const InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 27"));
+
+Set<Polyline> polylineREGRESO27 = {polylineRuta27};
+
+Set<Marker> markerRuta27regreso = {markerIR, markerRR};
