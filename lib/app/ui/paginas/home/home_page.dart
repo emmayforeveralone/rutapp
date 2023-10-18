@@ -5,10 +5,24 @@ import 'package:flutter/material.dart';
 
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rutapp/app/datos/ruta12.dart';
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
 import 'package:rutapp/app/datos/ruta5.dart';
+import 'package:rutapp/app/datos/ruta6.dart';
+import 'package:rutapp/app/datos/ruta7.dart';
+import 'package:rutapp/app/datos/ruta8.dart';
+import 'package:rutapp/app/datos/ruta9.dart';
+import 'package:rutapp/app/datos/ruta11.dart';
+import 'package:rutapp/app/datos/ruta13.dart';
+import 'package:rutapp/app/datos/ruta14.dart';
+import 'package:rutapp/app/datos/ruta15.dart';
+import 'package:rutapp/app/datos/ruta16.dart';
+import 'package:rutapp/app/datos/ruta17.dart';
+import 'package:rutapp/app/datos/ruta18.dart';
+import 'package:rutapp/app/datos/ruta19.dart';
+import 'package:rutapp/app/datos/ruta20.dart';
 import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
@@ -51,7 +65,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     _requestLocationPermission();
-    // _addPolyline(); // Agregar la ruta al mapa
     super.initState();
   }
 
@@ -76,8 +89,9 @@ class _HomePageState extends State<HomePage> {
                 child: Text(combi.nombre),
               );
             }).toList(),
+            menuMaxHeight: 300.0,
             decoration: const InputDecoration(
-              labelText: 'Selecciona una Combi',
+              labelText: 'Selecciona una Combi De Ida',
             ),
           ),
           Expanded(
@@ -90,10 +104,10 @@ class _HomePageState extends State<HomePage> {
               onMapCreated: (GoogleMapController controller) {
                 _controller.complete(controller);
               },
-              polylines: {
+              polylines: <Polyline>{
                 if (_combiSeleccionada != null)
                   ...listaDeCombis
-                      .firstWhere((combi) => combi.nombre == _combiSeleccionada,
+                      .lastWhere((combi) => combi.nombre == _combiSeleccionada,
                           orElse: () => Combi('', {}))
                       .ruta,
               },
@@ -102,7 +116,21 @@ class _HomePageState extends State<HomePage> {
                 ...markerXochi,
                 ...markerRuta2,
                 ...markerRuta3,
-                ...markerRuta5
+                ...markerRuta5,
+                ...markerRuta6,
+                ...markerRuta7,
+                ...markerRuta8,
+                ...markerRuta9,
+                ...markerRuta11,
+                ...markerRuta12,
+                ...markerRuta13,
+                ...markerRuta14,
+                ...markerRuta15,
+                ...markerRuta16,
+                ...markerRuta17,
+                ...markerRuta18,
+                ...markerRuta19,
+                ...markerRuta20,
               },
 
               //polylines: //_polylines,
