@@ -10,7 +10,10 @@ import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
 import 'package:rutapp/app/datos/ruta5.dart';
-<<<<<<< HEAD
+import 'package:rutapp/app/datos/ruta6.dart';
+import 'package:rutapp/app/datos/ruta7.dart';
+import 'package:rutapp/app/datos/ruta8.dart';
+import 'package:rutapp/app/datos/ruta9.dart';
 import 'package:rutapp/app/datos/ruta11.dart';
 import 'package:rutapp/app/datos/ruta13.dart';
 import 'package:rutapp/app/datos/ruta14.dart';
@@ -20,13 +23,6 @@ import 'package:rutapp/app/datos/ruta17.dart';
 import 'package:rutapp/app/datos/ruta18.dart';
 import 'package:rutapp/app/datos/ruta19.dart';
 import 'package:rutapp/app/datos/ruta20.dart';
-
-=======
-import 'package:rutapp/app/datos/ruta6.dart';
-import 'package:rutapp/app/datos/ruta7.dart';
-import 'package:rutapp/app/datos/ruta8.dart';
-import 'package:rutapp/app/datos/ruta9.dart';
->>>>>>> b97e2f76557778ca42394f5637689091b757cb81
 import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
@@ -121,7 +117,10 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta2,
                 ...markerRuta3,
                 ...markerRuta5,
-<<<<<<< HEAD
+                ...markerRuta6,
+                ...markerRuta7,
+                ...markerRuta8,
+                ...markerRuta9,
                 ...markerRuta11,
                 ...markerRuta12,
                 ...markerRuta13,
@@ -131,13 +130,7 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta17,
                 ...markerRuta18,
                 ...markerRuta19,
-                ...markerRuta20
-=======
-                ...markerRuta6,
-                ...markerRuta7,
-                ...markerRuta8,
-                ...markerRuta9,
->>>>>>> b97e2f76557778ca42394f5637689091b757cb81
+                ...markerRuta20,
               },
 
               //polylines: //_polylines,
