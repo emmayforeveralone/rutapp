@@ -11,7 +11,6 @@ import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
 import 'package:rutapp/app/datos/ruta5.dart';
 import 'package:rutapp/app/datos/ruta11.dart';
-import 'package:rutapp/app/datos/ruta12.dart';
 import 'package:rutapp/app/datos/ruta13.dart';
 import 'package:rutapp/app/datos/ruta14.dart';
 import 'package:rutapp/app/datos/ruta15.dart';
