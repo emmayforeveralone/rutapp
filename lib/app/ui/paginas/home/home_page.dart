@@ -23,6 +23,16 @@ import 'package:rutapp/app/datos/ruta17.dart';
 import 'package:rutapp/app/datos/ruta18.dart';
 import 'package:rutapp/app/datos/ruta19.dart';
 import 'package:rutapp/app/datos/ruta20.dart';
+import 'package:rutapp/app/datos/ruta21.dart';
+import 'package:rutapp/app/datos/ruta22.dart';
+import 'package:rutapp/app/datos/ruta23.dart';
+import 'package:rutapp/app/datos/ruta24.dart';
+import 'package:rutapp/app/datos/ruta25.dart';
+import 'package:rutapp/app/datos/ruta26.dart';
+import 'package:rutapp/app/datos/ruta27.dart';
+import 'package:rutapp/app/datos/ruta28.dart';
+import 'package:rutapp/app/datos/ruta29.dart';
+import 'package:rutapp/app/datos/ruta30.dart';
 import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
@@ -131,6 +141,16 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta18,
                 ...markerRuta19,
                 ...markerRuta20,
+                ...markerRuta21,
+                ...markerRuta22,
+                ...markerRuta23,
+                ...markerRuta24,
+                ...markerRuta25,
+                ...markerRuta26,
+                ...markerRuta27,
+                ...markerRuta28,
+                ...markerRuta29,
+                ...markerRuta30,
               },
 
               //polylines: //_polylines,
