@@ -56,14 +56,14 @@ final Polyline polylineRuta24RE = Polyline(
 );
 Marker markerIR = const Marker(
     markerId: MarkerId('markerIdaRUTA24'),
-    position: LatLng(14.950402428008362, -92.25401951577824),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 24"));
+    position: LatLng(14.926859866457542, -92.26991807774965),
+    infoWindow: InfoWindow(title: "Base de Ida", snippet: "Ruta El vergel"));
 Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA24'),
-    position: const LatLng(14.911487636284026, -92.26444684386084),
+    position: const LatLng(14.91565480614814, -92.26524535356685),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
     infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 24"));
+        const InfoWindow(title: "Base de Regreso", snippet: "Ruta El vergel'"));
 
 Set<Polyline> polylineIDA24 = {polylineRuta24};
 Set<Polyline> polylineREGRESO24 = {polylineRuta24RE};

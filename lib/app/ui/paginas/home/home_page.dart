@@ -16,7 +16,6 @@ import 'package:rutapp/app/datos/ruta41regreso.dart';
 import 'package:rutapp/app/datos/ruta42.dart';
 import 'package:rutapp/app/datos/ruta42regreso.dart';
 import 'package:rutapp/app/datos/ruta43.dart';
-import 'package:rutapp/app/datos/ruta43regreso.dart';
 import 'package:rutapp/app/datos/ruta44.dart';
 import 'package:rutapp/app/datos/ruta45.dart';
 import 'package:rutapp/app/datos/ruta46.dart';
@@ -24,11 +23,9 @@ import 'package:rutapp/app/datos/ruta47.dart';
 import 'package:rutapp/app/datos/ruta47regreso.dart';
 import 'package:rutapp/app/datos/ruta49.dart';
 import 'package:rutapp/app/datos/ruta49regreso.dart';
-import 'package:rutapp/app/datos/ruta5.dart';
 import 'package:rutapp/app/datos/ruta6.dart';
 import 'package:rutapp/app/datos/ruta7.dart';
 import 'package:rutapp/app/datos/ruta8.dart';
-import 'package:rutapp/app/datos/ruta9.dart';
 import 'package:rutapp/app/datos/ruta11.dart';
 import 'package:rutapp/app/datos/ruta13.dart';
 import 'package:rutapp/app/datos/ruta14.dart';
@@ -136,16 +133,13 @@ class _HomePageState extends State<HomePage> {
                           orElse: () => Combi('', {}))
                       .ruta,
               },
-
               markers: {
                 ...markerXochi,
                 ...markerRuta2,
                 ...markerRuta3,
-                ...markerRuta5,
                 ...markerRuta6,
                 ...markerRuta7,
                 ...markerRuta8,
-                ...markerRuta9,
                 ...markerRuta11,
                 ...markerRuta12,
                 ...markerRuta13,
@@ -159,6 +153,7 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta21,
                 ...markerRuta22,
                 ...markerRuta23,
+                ...markerRuta23Extension,
                 ...markerRuta24,
                 ...markerRuta25,
                 ...markerRuta26,
@@ -173,7 +168,6 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta42,
                 ...markerRuta42Reg,
                 ...markerRuta43,
-                ...markerRuta43Reg,
                 ...markerRuta44,
                 ...markerRuta45,
                 ...markerRuta46,
@@ -181,10 +175,6 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta47Reg,
                 ...markerRuta49,
                 ...markerRuta49Reg,
-                
-
-               
-
               },
 
               //polylines: //_polylines,

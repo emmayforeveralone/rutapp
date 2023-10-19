@@ -46,12 +46,11 @@ Marker markerIX = const Marker(
     position: LatLng(14.944155, -92.256285),
     infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA XOCHIMILCO"));
 
-Marker markerRX = Marker(
-    markerId: const MarkerId('marker'),
-    position: const LatLng(14.911874, -92.264891),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
+Marker markerRX = const Marker(
+    markerId: MarkerId('marker'),
+    position: LatLng(14.911874, -92.264891),
     infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "RUTA XOCHIMILCO"));
+        InfoWindow(title: "Base de Regreso", snippet: "RUTA XOCHIMILCO"));
 
 final List<LatLng> rutaIDA = [
   const LatLng(14.94426545049227, -92.25631656827763),
@@ -116,7 +115,7 @@ const PolylineId polylineRutaXochimilcoIda =
     PolylineId("Ruta Xochimilco Regreso");
 final Polyline polylineR = Polyline(
   polylineId: polylineRutaXochimilcoIda,
-  color: Colors.blue, // Color de la línea de la ruta
+  color: Colors.redAccent, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: rutaIDA,
 );

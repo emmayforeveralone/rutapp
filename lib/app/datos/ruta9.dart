@@ -193,7 +193,7 @@ List<LatLng> rutaDerecha = [
 const PolylineId polylineRuta9IDA = PolylineId("Ruta 9");
 final Polyline polylineRuta9 = Polyline(
   polylineId: polylineRuta9IDA,
-  color: Colors.green, // Color de la línea de la ruta
+  color: Colors.red, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: rutaDerecha,
 );
@@ -427,7 +427,7 @@ List<LatLng> rutaIzquierda = [
 const PolylineId polylineRuta9Regreso = PolylineId("Ruta 9");
 final Polyline polylineRuta9regre = Polyline(
   polylineId: polylineRuta9Regreso,
-  color: Colors.tealAccent, // Color de la línea de la ruta
+  color: Colors.red, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: rutaIzquierda,
 );

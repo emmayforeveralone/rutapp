@@ -78,7 +78,7 @@ final Polyline polylineRuta6 = Polyline(
 Marker markerIR = const Marker(
     markerId: MarkerId('markerIdaRUTA6'),
     position: LatLng(14.900038387213106, -92.24218549585548),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 6"));
+    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA Bonanza"));
 
 List<LatLng> ruta2 = [
   const LatLng(14.910304392332062, -92.25895969025628),
@@ -135,17 +135,15 @@ List<LatLng> ruta2 = [
 const PolylineId polylineRuta6REGRESO = PolylineId("Ruta 6");
 final Polyline polylineRuta6REGRE = Polyline(
   polylineId: polylineRuta6REGRESO,
-  color: Colors.cyanAccent, // Color de la línea de la ruta
+  color: Colors.pink, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
 
-Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA5'),
-    position: const LatLng(14.910304392332062, -92.25895969025628),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
-    infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 6"));
+Marker markerRR = const Marker(
+    markerId: MarkerId('markerRegresoRUTA5'),
+    position: LatLng(14.910304392332062, -92.25895969025628),
+    infoWindow: InfoWindow(title: "Base de Regreso", snippet: "RUTA Bonanza"));
 
 Set<Polyline> polylineIDA6 = {polylineRuta6};
 Set<Polyline> polylineIDA6REGRE = {polylineRuta6REGRE};

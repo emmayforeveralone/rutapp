@@ -77,7 +77,7 @@ List<LatLng> ruta = [
 const PolylineId polylineRuta11IDA = PolylineId("Ruta 11");
 final Polyline polylineRuta11 = Polyline(
   polylineId: polylineRuta11IDA,
-  color: Colors.pink, // Color de la línea de la ruta
+  color: Colors.orangeAccent, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
@@ -85,19 +85,20 @@ final Polyline polylineRuta11 = Polyline(
 const PolylineId polylineRuta11RE = PolylineId("Ruta 11");
 final Polyline polylineRuta11REGRESO = Polyline(
   polylineId: polylineRuta11RE,
-  color: Color.fromARGB(255, 0, 189, 28), // Color de la línea de la ruta
+  color: Colors.orangeAccent, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
 
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA11'),
-    position: LatLng(14.91380504527542, -92.26477509310585),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 11"));
+Marker markerIR = Marker(
+    markerId: const MarkerId('markerIdaRUTA11'),
+    position: const LatLng(14.91380504527542, -92.26477509310585),
+    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+    infoWindow: const InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 11"));
 Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA11'),
     position: const LatLng(14.928546750549737, -92.24242373647574),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
+    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
     infoWindow:
         const InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 11"));
 

@@ -158,7 +158,7 @@ List<LatLng> ruta2 = [
 const PolylineId polylineRuta7REGRESO = PolylineId("Ruta 7");
 final Polyline polylineRuta7RE = Polyline(
   polylineId: polylineRuta7REGRESO,
-  color: Colors.purpleAccent, // Color de la línea de la ruta
+  color: Colors.green, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
@@ -166,7 +166,7 @@ final Polyline polylineRuta7RE = Polyline(
 Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA7'),
     position: const LatLng(14.91184437792631, -92.26234063113488),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
     infoWindow:
         const InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 7"));
 
