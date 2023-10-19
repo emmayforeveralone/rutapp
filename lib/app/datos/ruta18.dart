@@ -114,9 +114,9 @@ final Polyline polylineRuta18REGRESO = Polyline(
 );
 
 Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA18'),
-    position: LatLng(14.950402428008362, -92.25401951577824),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 18"));
+    markerId: MarkerId('markerIdaRUTA17'),
+    position: LatLng(14.856612107834472, -92.25844520109351),
+    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 17"));
 Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA18'),
     position: const LatLng(14.912688087637367, -92.26439853103358),
