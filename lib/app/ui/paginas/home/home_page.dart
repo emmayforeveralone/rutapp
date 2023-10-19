@@ -9,6 +9,21 @@ import 'package:rutapp/app/datos/ruta12.dart';
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
+import 'package:rutapp/app/datos/ruta40.dart';
+import 'package:rutapp/app/datos/ruta40regreso.dart';
+import 'package:rutapp/app/datos/ruta41.dart';
+import 'package:rutapp/app/datos/ruta41regreso.dart';
+import 'package:rutapp/app/datos/ruta42.dart';
+import 'package:rutapp/app/datos/ruta42regreso.dart';
+import 'package:rutapp/app/datos/ruta43.dart';
+import 'package:rutapp/app/datos/ruta43regreso.dart';
+import 'package:rutapp/app/datos/ruta44.dart';
+import 'package:rutapp/app/datos/ruta45.dart';
+import 'package:rutapp/app/datos/ruta46.dart';
+import 'package:rutapp/app/datos/ruta47.dart';
+import 'package:rutapp/app/datos/ruta47regreso.dart';
+import 'package:rutapp/app/datos/ruta49.dart';
+import 'package:rutapp/app/datos/ruta49regreso.dart';
 import 'package:rutapp/app/datos/ruta5.dart';
 import 'package:rutapp/app/datos/ruta6.dart';
 import 'package:rutapp/app/datos/ruta7.dart';
@@ -131,6 +146,22 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta18,
                 ...markerRuta19,
                 ...markerRuta20,
+                ...markerRuta40,
+                ...markerRuta40Reg,
+                ...markerRuta41,
+                ...markerRuta41Reg,
+                ...markerRuta42,
+                ...markerRuta42Reg,
+                ...markerRuta43,
+                ...markerRuta43Reg,
+                ...markerRuta44,
+                ...markerRuta45,
+                ...markerRuta46,
+                ...markerRuta47,
+                ...markerRuta47Reg,
+                ...markerRuta49,
+                ...markerRuta49Reg,
+                
               },
 
               //polylines: //_polylines,

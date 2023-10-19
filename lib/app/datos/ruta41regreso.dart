@@ -91,9 +91,9 @@ const LatLng(14.905065444604146, -92.26935903480027)
 
 ];
 
-const PolylineId polylineRuta5IDA = PolylineId("Ruta 41 Regreso");
-final Polyline polylineRuta4 = Polyline(
-  polylineId: polylineRuta5IDA,
+const PolylineId polylineI41Regreso = PolylineId("Ruta 41 Regreso");
+final Polyline polylineRuta41R = Polyline(
+  polylineId: polylineI41Regreso,
   color: Color.fromARGB(255, 96, 58, 249), // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
@@ -109,6 +109,6 @@ Marker markerRR = Marker(
     infoWindow:
         const InfoWindow(title: "Ruta 41 Regreso", snippet: "RUTA REGRESO 41"));
 
-Set<Polyline> polylineIDA5 = {polylineRuta4};
+Set<Polyline> polylineIDA41Regreso = {polylineRuta41R};
 
-Set<Marker> markerRuta5 = {markerIR, markerRR};
+Set<Marker> markerRuta41Reg = {markerIR, markerRR};

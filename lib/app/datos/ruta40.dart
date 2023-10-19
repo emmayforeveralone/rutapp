@@ -30,24 +30,24 @@ List<LatLng> ruta = [
   
 ];
 
-const PolylineId polylineRuta5IDA = PolylineId("Ruta 40");
-final Polyline polylineRuta4 = Polyline(
-  polylineId: polylineRuta5IDA,
+const PolylineId polylineRuta40IDA = PolylineId("Ruta 40");
+final Polyline polylineRuta40 = Polyline(
+  polylineId: polylineRuta40IDA,
   color: Color.fromARGB(255, 40, 165, 15), // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
 Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA40'),
+    markerId: MarkerId('markerRuta40'),
     position: LatLng(14.915626756179376, -92.26525117882862 ),
     infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 40"));
 Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA40'),
+    markerId: const MarkerId('markerRuta40'),
     position: const LatLng(14.918461246864956, -92.28668104936548),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
     infoWindow:
         const InfoWindow(title: "Ruta 40", snippet: "RUTA REGRESO 40"));
 
-Set<Polyline> polylineIDA5 = {polylineRuta4};
+Set<Polyline> polylineIDA40 = {polylineRuta40};
 
-Set<Marker> markerRuta5 = {markerIR, markerRR};
+Set<Marker> markerRuta40 = {markerIR, markerRR};
