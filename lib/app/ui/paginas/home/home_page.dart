@@ -5,9 +5,11 @@ import 'package:flutter/material.dart';
 
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rutapp/app/datos/ruta12.dart';
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
+<<<<<<< HEAD
 import 'package:rutapp/app/datos/ruta31.dart';
 import 'package:rutapp/app/datos/ruta32.dart';
 import 'package:rutapp/app/datos/ruta33.dart';
@@ -18,6 +20,44 @@ import 'package:rutapp/app/datos/ruta38.dart';
 import 'package:rutapp/app/datos/ruta39.dart';
 
 
+=======
+// import 'package:rutapp/app/datos/ruta40.dart';
+// import 'package:rutapp/app/datos/ruta40regreso.dart';
+import 'package:rutapp/app/datos/ruta41.dart';
+import 'package:rutapp/app/datos/ruta41regreso.dart';
+import 'package:rutapp/app/datos/ruta42.dart';
+import 'package:rutapp/app/datos/ruta42regreso.dart';
+import 'package:rutapp/app/datos/ruta43.dart';
+import 'package:rutapp/app/datos/ruta44.dart';
+import 'package:rutapp/app/datos/ruta45.dart';
+import 'package:rutapp/app/datos/ruta46.dart';
+import 'package:rutapp/app/datos/ruta47.dart';
+import 'package:rutapp/app/datos/ruta47regreso.dart';
+import 'package:rutapp/app/datos/ruta49.dart';
+import 'package:rutapp/app/datos/ruta49regreso.dart';
+import 'package:rutapp/app/datos/ruta6.dart';
+import 'package:rutapp/app/datos/ruta7.dart';
+import 'package:rutapp/app/datos/ruta8.dart';
+import 'package:rutapp/app/datos/ruta11.dart';
+import 'package:rutapp/app/datos/ruta13.dart';
+import 'package:rutapp/app/datos/ruta14.dart';
+import 'package:rutapp/app/datos/ruta15.dart';
+import 'package:rutapp/app/datos/ruta16.dart';
+import 'package:rutapp/app/datos/ruta17.dart';
+import 'package:rutapp/app/datos/ruta18.dart';
+import 'package:rutapp/app/datos/ruta19.dart';
+import 'package:rutapp/app/datos/ruta20.dart';
+import 'package:rutapp/app/datos/ruta21.dart';
+import 'package:rutapp/app/datos/ruta22.dart';
+import 'package:rutapp/app/datos/ruta23.dart';
+import 'package:rutapp/app/datos/ruta24.dart';
+import 'package:rutapp/app/datos/ruta25.dart';
+import 'package:rutapp/app/datos/ruta26.dart';
+import 'package:rutapp/app/datos/ruta27.dart';
+import 'package:rutapp/app/datos/ruta28.dart';
+import 'package:rutapp/app/datos/ruta29.dart';
+import 'package:rutapp/app/datos/ruta30.dart';
+>>>>>>> 70848c87411ee0254fad3b68ffad1a57214aba9e
 import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
@@ -60,7 +100,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     _requestLocationPermission();
-    // _addPolyline(); // Agregar la ruta al mapa
     super.initState();
   }
 
@@ -85,8 +124,9 @@ class _HomePageState extends State<HomePage> {
                 child: Text(combi.nombre),
               );
             }).toList(),
+            menuMaxHeight: 300.0,
             decoration: const InputDecoration(
-              labelText: 'Selecciona una Combi',
+              labelText: 'Selecciona una Combi De Ida',
             ),
           ),
           Expanded(
@@ -99,18 +139,18 @@ class _HomePageState extends State<HomePage> {
               onMapCreated: (GoogleMapController controller) {
                 _controller.complete(controller);
               },
-              polylines: {
+              polylines: <Polyline>{
                 if (_combiSeleccionada != null)
                   ...listaDeCombis
-                      .firstWhere((combi) => combi.nombre == _combiSeleccionada,
+                      .lastWhere((combi) => combi.nombre == _combiSeleccionada,
                           orElse: () => Combi('', {}))
                       .ruta,
               },
-
               markers: {
                 ...markerXochi,
                 ...markerRuta2,
                 ...markerRuta3,
+<<<<<<< HEAD
                 ...markerRuta31,
                 ...markerRuta32,
                 ...markerRuta33,
@@ -122,6 +162,46 @@ class _HomePageState extends State<HomePage> {
 
 
 
+=======
+                ...markerRuta6,
+                ...markerRuta7,
+                ...markerRuta8,
+                ...markerRuta11,
+                ...markerRuta12,
+                ...markerRuta13,
+                ...markerRuta14,
+                ...markerRuta15,
+                ...markerRuta16,
+                ...markerRuta17,
+                ...markerRuta18,
+                ...markerRuta19,
+                ...markerRuta20,
+                ...markerRuta21,
+                ...markerRuta22,
+                ...markerRuta23,
+                ...markerRuta23Extension,
+                ...markerRuta24,
+                ...markerRuta25,
+                ...markerRuta26,
+                ...markerRuta27,
+                ...markerRuta28,
+                ...markerRuta29,
+                ...markerRuta30,
+                // ...markerRuta40,
+                // ...markerRuta40Reg,
+                ...markerRuta41,
+                ...markerRuta41Reg,
+                ...markerRuta42,
+                ...markerRuta42Reg,
+                ...markerRuta43,
+                ...markerRuta44,
+                ...markerRuta45,
+                ...markerRuta46,
+                ...markerRuta47,
+                ...markerRuta47Reg,
+                ...markerRuta49,
+                ...markerRuta49Reg,
+>>>>>>> 70848c87411ee0254fad3b68ffad1a57214aba9e
               },
 
               //polylines: //_polylines,
