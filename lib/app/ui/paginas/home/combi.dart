@@ -1,7 +1,6 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
-<<<<<<< HEAD
 import 'package:rutapp/app/datos/ruta31.dart';
 import 'package:rutapp/app/datos/ruta32.dart';
 import 'package:rutapp/app/datos/ruta33.dart';
@@ -12,7 +11,6 @@ import 'package:rutapp/app/datos/ruta38.dart';
 import 'package:rutapp/app/datos/ruta39.dart';
 
 
-=======
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta6.dart';
 import 'package:rutapp/app/datos/ruta7.dart';
@@ -53,7 +51,6 @@ import 'package:rutapp/app/datos/ruta47.dart';
 import 'package:rutapp/app/datos/ruta47regreso.dart';
 import 'package:rutapp/app/datos/ruta49.dart';
 import 'package:rutapp/app/datos/ruta49regreso.dart';
->>>>>>> 70848c87411ee0254fad3b68ffad1a57214aba9e
 
 class Combi {
   final String nombre;
@@ -64,7 +61,6 @@ class Combi {
 
 // Lista de combis
 final List<Combi> listaDeCombis = [
-<<<<<<< HEAD
   Combi('RUTA XOCHIMILCO', polylineIdaXochi), // Ruta 1
   Combi('RUTA 2', polylineIDA2), // Ruta 2
   Combi('Ruta 5 de Febrero', polylineIDA3),
@@ -97,7 +93,6 @@ final List<Combi> listaDeCombis = [
 
 
   // Agrega más combis según sea necesario
-=======
   Combi('RUTA Xochimilco Regreso', polylineIdaXochi), // Ruta 1
   Combi('RUTA Xochimilco Ida', polylineRegreXochi),
   Combi('RUTA Laureles 2 Ida', polylineIDA2), // Ruta 2
@@ -164,5 +159,4 @@ final List<Combi> listaDeCombis = [
   Combi('Ruta 47 Regreso', polylineIDA47Regreso), //
   Combi('Ruta 49 Ida', polylineIDA49), //
   Combi('Ruta 49 Regreso', polylineIDA49Regreso), //
->>>>>>> 70848c87411ee0254fad3b68ffad1a57214aba9e
 ];
