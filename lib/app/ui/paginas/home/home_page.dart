@@ -32,7 +32,7 @@ import 'package:rutapp/app/datos/ruta47regreso.dart';
 import 'package:rutapp/app/datos/ruta49.dart';
 import 'package:rutapp/app/datos/ruta49regreso.dart';
 import 'package:rutapp/app/datos/ruta6.dart';
-import 'package:rutapp/app/datos/ruta7.dart';
+// import 'package:rutapp/app/datos/ruta7.dart';
 import 'package:rutapp/app/datos/ruta8.dart';
 import 'package:rutapp/app/datos/ruta11.dart';
 import 'package:rutapp/app/datos/ruta13.dart';
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta2,
                 ...markerRuta3,
                 ...markerRuta6,
-                ...markerRuta7,
+                // ...markerRuta7,
                 ...markerRuta8,
                 ...markerRuta11,
                 ...markerRuta12,
