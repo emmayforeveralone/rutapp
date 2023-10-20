@@ -3,7 +3,7 @@ import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta6.dart';
-import 'package:rutapp/app/datos/ruta7.dart';
+// import 'package:rutapp/app/datos/ruta7.dart';
 import 'package:rutapp/app/datos/ruta8.dart';
 import 'package:rutapp/app/datos/ruta9.dart';
 import 'package:rutapp/app/datos/ruta11.dart';
@@ -51,38 +51,38 @@ class Combi {
 
 // Lista de combis
 final List<Combi> listaDeCombis = [
-  Combi('RUTA Xochimilco Regreso', polylineIdaXochi), // Ruta 1
   Combi('RUTA Xochimilco Ida', polylineRegreXochi),
+  Combi('RUTA Xochimilco Regreso', polylineIdaXochi), // Ruta 1
   Combi('RUTA Laureles 2 Ida', polylineIDA2), // Ruta 2
   Combi('Ruta Laureles 2 Regreso', polylineREGRESO2), //
   Combi('Ruta 5 de Febrero Ida', polylineIDA3), //
   Combi('Ruta 5 de Febrero Regreso', polylineREGRESO3), //
   Combi('Ruta Bonanza Por Tercera Ida', polylineIDA6), //
   Combi('Ruta Bonanza Por Tercera Regreso', polylineIDA6REGRE), //
-  Combi('Ruta 7 IDA', polylineIDA7), //
-  Combi('Ruta 7 Regreso', polylineREGRESO7), //
-  Combi('Ruta 8 IDA', polylineIDA8), //
-  Combi('Ruta 8 REGRESO', polylineREGRESO8), //
-  Combi('Ruta 9 Derecha', polylineIDA9), //
-  Combi('Ruta 9 Izquierda', polylineREGRESO9), //
-  Combi('Ruta 11 Ida', polylineIDA11), //
-  Combi('Ruta 11 Regreso', polyline11REGRESO), //
-  Combi('Ruta 12', polylineIDA12), //
-  Combi('Ruta 12 Regreso', polyline12REGRESO), //
-  Combi('Ruta 13', polylineIDA13), //
-  Combi('Ruta 13 Regreso', polyline13REGRESO), //
-  Combi('Ruta 14', polylineIDA14), //
-  Combi('Ruta 14 Regreso', polyline14REGRESO), //
-  Combi('Ruta 15', polylineIDA15), //
-  Combi('Ruta 16', polylineIDA16), //
-  Combi('Ruta 17', polylineIDA17), //
-  Combi('Ruta 17 Regreso', polyline17REGRESO), //
-  Combi('Ruta 18', polylineIDA18), //
-  Combi('Ruta 18 Regreso', polyline18REGRESO), //
-  Combi('Ruta 19', polylineIDA19), //
-  Combi('Ruta 19 Regreso', polyline19REGRESO), //
-  Combi('Ruta 20', polylineIDA20), //
-  Combi('Ruta 20 Regreso', polylineI20REGRESO), //
+  // Combi('Ruta 7 IDA', polylineIDA7), //
+  // Combi('Ruta 7 Regreso', polylineREGRESO7), //
+  Combi('Ruta Bonanza Regreso Por 17 Ida', polylineIDA8), //
+  Combi('Ruta Bonanza Regreso por 17 Regreso', polylineREGRESO8), //
+  Combi('Ruta Palmeras Derecha', polylineIDA9), //
+  Combi('Ruta Palmeras Izquierda', polylineREGRESO9), //
+  Combi('Ruta Montenegro Ida', polylineIDA11), //
+  Combi('Ruta Montenegro Regreso', polyline11REGRESO), //
+  Combi('Ruta La Joya Ida', polylineIDA12), //
+  Combi('Ruta La Joya Regreso', polyline12REGRESO), //
+  Combi('Ruta Framboyanes Ida', polylineIDA13), //
+  Combi('Ruta Framboyanes Regreso', polyline13REGRESO), //
+  Combi('Ruta Vida Mejor Ida', polylineIDA14), //
+  Combi('Ruta Vida Mejor Regreso', polyline14REGRESO), //
+  Combi('Ruta Periferico Izquierda', polylineIDA15), //
+  Combi('Ruta Periferico Derecha', polylineIDA16), //
+  Combi('Ruta Emiliano Zapata Par Vial Ida', polylineIDA17), //
+  Combi('Ruta Emiliano Zapata Par Vial Regreso', polyline17REGRESO), //
+  Combi('Ruta Los Palacios Ida', polylineIDA18), //
+  Combi('Ruta LOs Palacios Regreso', polyline18REGRESO), //
+  Combi('Ruta Seminarista Ida', polylineIDA19), //
+  Combi('Ruta Seminarista Regreso', polyline19REGRESO), //
+  Combi('Ruta 6 De Enero Ida', polylineIDA20), //
+  Combi('Ruta 6 de Enero Regreso', polylineI20REGRESO), //
   Combi('Ruta Lomas de sayula (tecnica 3) Ida', polylineIDA21),
   Combi('Ruta Lomas de sayula (tecnica 3) Regreso', polylineREGRESO21),
   Combi('Ruta Colinas del rey Ida', polylineIDA22),
@@ -100,21 +100,21 @@ final List<Combi> listaDeCombis = [
   Combi('Ruta Las vegas izquierda Regreso', polylineREGRESO28),
   Combi('Ruta Las vegas derecha Ida', polylineIDA29),
   Combi('Ruta Las vegas derecha Regreso', polylineREGRESO29),
-  Combi('Ruta El porvenir Ida', polylineIDA30),
-  Combi('Ruta El porvenir Regreso', polylineREGRESO30),
+  Combi('Ruta El Porvenir Ida', polylineIDA30),
+  Combi('Ruta El Porvenir Regreso', polylineREGRESO30),
   // Combi('Ruta 40 Ida', polylineIDA40), //
   // Combi('Ruta 40 Regreso', polylineregreso40), //
-  Combi('Ruta 41 Ida', polylineIDA41), //
-  Combi('Ruta 41 Regreso', polylineIDA41Regreso), //
-  Combi('Ruta 42 REY MUNDO ENRIQUE Ida', polylineIDA42), //
-  Combi('Ruta 42 REY MUNDO ENRIQUE Regreso', polylineIDA42Regreso), //
-  Combi('Ruta 43 Ida', polylineIDA43), //
-  Combi('Ruta 43 Regreso', polylineIDA43Regreso), //
-  Combi('Ruta 44', polylineIDA44), //
-  Combi('Ruta 45', polylineIDA45), //
-  Combi('Ruta 46', polylineIDA46), //
-  Combi('Ruta 47 Ida', polylineIDA47), //
-  Combi('Ruta 47 Regreso', polylineIDA47Regreso), //
-  Combi('Ruta 49 Ida', polylineIDA49), //
-  Combi('Ruta 49 Regreso', polylineIDA49Regreso), //
+  Combi('Ruta Nuevo Milenio Ida', polylineIDA41), //
+  Combi('Ruta Nuevo Milenio Regreso', polylineIDA41Regreso), //
+  Combi('Ruta Rey Mundo Enrique Ida', polylineIDA42), //
+  Combi('Ruta Rey Mundo Enrique Regreso', polylineIDA42Regreso), //
+  Combi('Ruta Tecnica 3 Ida', polylineIDA43), //
+  Combi('Ruta Tecnica 3 Regreso', polylineIDA43Regreso), //
+  Combi('Ruta Zocalo Estacion', polylineIDA44), //
+  Combi('Ruta Emiliano Zapata', polylineIDA45), //
+  Combi('Ruta Teofilio Acebo', polylineIDA46), //
+  Combi('Ruta Venustiano Carranza Ida', polylineIDA47), //
+  Combi('Ruta Venustiano Carranza Regreso', polylineIDA47Regreso), //
+  Combi('Ruta Unidad Administrativa Ida', polylineIDA49), //
+  Combi('Ruta Unidad Administrativa Regreso', polylineIDA49Regreso), //
 ];
