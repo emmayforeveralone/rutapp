@@ -100,12 +100,12 @@ final Polyline polylineRuta1REGRESO = Polyline(
 Marker markerIR = const Marker(
     markerId: MarkerId('markerIdaRUTA12'),
     position: LatLng(14.87200744395737, -92.26052992873105),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 12"));
+    infoWindow: InfoWindow(title: "Base de Ida", snippet: "Ruta La Joya Ida"));
 Marker markerRR = const Marker(
     markerId: MarkerId('markerRegresoRUTA3'),
     position: LatLng(14.908411062159404, -92.25733174109645),
     infoWindow:
-        InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 12"));
+        InfoWindow(title: "Base de Regreso", snippet: "Ruta La Joya Regreso"));
 
 Set<Polyline> polylineIDA12 = {polylineRuta12};
 Set<Polyline> polyline12REGRESO = {polylineRuta1REGRESO};

@@ -9,8 +9,8 @@ import 'package:rutapp/app/datos/ruta12.dart';
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
-import 'package:rutapp/app/datos/ruta40.dart';
-import 'package:rutapp/app/datos/ruta40regreso.dart';
+// import 'package:rutapp/app/datos/ruta40.dart';
+// import 'package:rutapp/app/datos/ruta40regreso.dart';
 import 'package:rutapp/app/datos/ruta41.dart';
 import 'package:rutapp/app/datos/ruta41regreso.dart';
 import 'package:rutapp/app/datos/ruta42.dart';
@@ -161,8 +161,8 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta28,
                 ...markerRuta29,
                 ...markerRuta30,
-                ...markerRuta40,
-                ...markerRuta40Reg,
+                // ...markerRuta40,
+                // ...markerRuta40Reg,
                 ...markerRuta41,
                 ...markerRuta41Reg,
                 ...markerRuta42,

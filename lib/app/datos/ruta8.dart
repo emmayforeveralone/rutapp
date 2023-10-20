@@ -96,7 +96,8 @@ Marker markerIR = Marker(
     markerId: const MarkerId('markerIdaRUTA8'),
     position: const LatLng(14.867818838864874, -92.27617462615618),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
-    infoWindow: const InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 8"));
+    infoWindow: const InfoWindow(
+        title: "Base de Ida", snippet: "Ruta Bonanza Regreso por la 17"));
 
 List<LatLng> ruta2 = [
   const LatLng(14.912447756692464, -92.2657426262038),
@@ -214,8 +215,8 @@ Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA8'),
     position: const LatLng(14.912447756692464, -92.2657426262038),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
-    infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 8"));
+    infoWindow: const InfoWindow(
+        title: "Base de Regreso", snippet: "Ruta Bonanza Regreso por la 17"));
 
 Set<Polyline> polylineIDA8 = {polylineRuta8};
 Set<Polyline> polylineREGRESO8 = {polylineRuta8RE};

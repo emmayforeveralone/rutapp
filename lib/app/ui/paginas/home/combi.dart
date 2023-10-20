@@ -26,8 +26,8 @@ import 'package:rutapp/app/datos/ruta27.dart';
 import 'package:rutapp/app/datos/ruta28.dart';
 import 'package:rutapp/app/datos/ruta29.dart';
 import 'package:rutapp/app/datos/ruta30.dart';
-import 'package:rutapp/app/datos/ruta40.dart';
-import 'package:rutapp/app/datos/ruta40regreso.dart';
+// import 'package:rutapp/app/datos/ruta40.dart';
+// import 'package:rutapp/app/datos/ruta40regreso.dart';
 import 'package:rutapp/app/datos/ruta41.dart';
 import 'package:rutapp/app/datos/ruta41regreso.dart';
 import 'package:rutapp/app/datos/ruta42.dart';
@@ -53,12 +53,12 @@ class Combi {
 final List<Combi> listaDeCombis = [
   Combi('RUTA Xochimilco Regreso', polylineIdaXochi), // Ruta 1
   Combi('RUTA Xochimilco Ida', polylineRegreXochi),
-  Combi('RUTA 2 IDA', polylineIDA2), // Ruta 2
-  Combi('Ruta 2 Regreso', polylineREGRESO2), //
+  Combi('RUTA Laureles 2 Ida', polylineIDA2), // Ruta 2
+  Combi('Ruta Laureles 2 Regreso', polylineREGRESO2), //
   Combi('Ruta 5 de Febrero Ida', polylineIDA3), //
   Combi('Ruta 5 de Febrero Regreso', polylineREGRESO3), //
-  Combi('Ruta Bonanza Ida', polylineIDA6), //
-  Combi('Ruta Bonanza Regreso', polylineIDA6REGRE), //
+  Combi('Ruta Bonanza Por Tercera Ida', polylineIDA6), //
+  Combi('Ruta Bonanza Por Tercera Regreso', polylineIDA6REGRE), //
   Combi('Ruta 7 IDA', polylineIDA7), //
   Combi('Ruta 7 Regreso', polylineREGRESO7), //
   Combi('Ruta 8 IDA', polylineIDA8), //
@@ -102,8 +102,8 @@ final List<Combi> listaDeCombis = [
   Combi('Ruta Las vegas derecha Regreso', polylineREGRESO29),
   Combi('Ruta El porvenir Ida', polylineIDA30),
   Combi('Ruta El porvenir Regreso', polylineREGRESO30),
-  Combi('Ruta 40 Ida', polylineIDA40), //
-  Combi('Ruta 40 Regreso', polylineregreso40), //
+  // Combi('Ruta 40 Ida', polylineIDA40), //
+  // Combi('Ruta 40 Regreso', polylineregreso40), //
   Combi('Ruta 41 Ida', polylineIDA41), //
   Combi('Ruta 41 Regreso', polylineIDA41Regreso), //
   Combi('Ruta 42 REY MUNDO ENRIQUE Ida', polylineIDA42), //

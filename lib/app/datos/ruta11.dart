@@ -94,13 +94,14 @@ Marker markerIR = Marker(
     markerId: const MarkerId('markerIdaRUTA11'),
     position: const LatLng(14.91380504527542, -92.26477509310585),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
-    infoWindow: const InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 11"));
+    infoWindow:
+        const InfoWindow(title: "Base de Ida", snippet: "Ruta Montenegro Ida"));
 Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA11'),
     position: const LatLng(14.928546750549737, -92.24242373647574),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
-    infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 11"));
+    infoWindow: const InfoWindow(
+        title: "Base de Regreso", snippet: "Ruta Montenegro Regreso"));
 
 Set<Polyline> polylineIDA11 = {polylineRuta11};
 Set<Polyline> polyline11REGRESO = {polylineRuta11REGRESO};

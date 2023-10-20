@@ -78,7 +78,8 @@ final Polyline polylineRuta6 = Polyline(
 Marker markerIR = const Marker(
     markerId: MarkerId('markerIdaRUTA6'),
     position: LatLng(14.900038387213106, -92.24218549585548),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA Bonanza"));
+    infoWindow: InfoWindow(
+        title: "Base de Ida", snippet: "Ruta Bonanza Regreso Por Tercera"));
 
 List<LatLng> ruta2 = [
   const LatLng(14.910304392332062, -92.25895969025628),
@@ -143,7 +144,8 @@ final Polyline polylineRuta6REGRE = Polyline(
 Marker markerRR = const Marker(
     markerId: MarkerId('markerRegresoRUTA5'),
     position: LatLng(14.910304392332062, -92.25895969025628),
-    infoWindow: InfoWindow(title: "Base de Regreso", snippet: "RUTA Bonanza"));
+    infoWindow: InfoWindow(
+        title: "Base de Regreso", snippet: "Ruta Bonanza Por Tercera"));
 
 Set<Polyline> polylineIDA6 = {polylineRuta6};
 Set<Polyline> polylineIDA6REGRE = {polylineRuta6REGRE};

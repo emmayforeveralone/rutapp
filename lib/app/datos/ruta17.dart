@@ -90,7 +90,7 @@ final Polyline polylineRuta17 = Polyline(
 const PolylineId polylineRuta17RE = PolylineId("Ruta 17");
 final Polyline polylineRuta17REGRESO = Polyline(
   polylineId: polylineRuta17RE,
-  color: Color.fromARGB(255, 0, 189, 28), // Color de la línea de la ruta
+  color: const Color.fromARGB(255, 0, 189, 28), // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
@@ -98,13 +98,14 @@ final Polyline polylineRuta17REGRESO = Polyline(
 Marker markerIR = const Marker(
     markerId: MarkerId('markerIdaRUTA17'),
     position: LatLng(14.885061455356162, -92.2719627500856),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 17"));
+    infoWindow: InfoWindow(
+        title: "Base de Ida", snippet: "Ruta Emiliano Zapata Par Vial"));
 Marker markerRR = Marker(
     markerId: const MarkerId('markerRegresoRUTA17'),
     position: const LatLng(14.909199186281478, -92.26661278135965),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-    infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "RUTA REGRESO 17"));
+    infoWindow: const InfoWindow(
+        title: "Base de Regreso", snippet: "Ruta Emiliano Zapata Par Vial"));
 
 Set<Polyline> polylineIDA17 = {polylineRuta17};
 Set<Polyline> polyline17REGRESO = {polylineRuta17REGRESO};
