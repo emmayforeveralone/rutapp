@@ -8,7 +8,16 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta1.dart';
 import 'package:rutapp/app/datos/ruta2.dart';
-import 'package:rutapp/app/datos/ruta5.dart';
+import 'package:rutapp/app/datos/ruta31.dart';
+import 'package:rutapp/app/datos/ruta32.dart';
+import 'package:rutapp/app/datos/ruta33.dart';
+import 'package:rutapp/app/datos/ruta34.dart';
+import 'package:rutapp/app/datos/ruta35.dart';
+import 'package:rutapp/app/datos/ruta37.dart';
+import 'package:rutapp/app/datos/ruta38.dart';
+import 'package:rutapp/app/datos/ruta39.dart';
+
+
 import 'package:rutapp/app/ui/paginas/home/combi.dart';
 
 class HomePage extends StatefulWidget {
@@ -102,7 +111,17 @@ class _HomePageState extends State<HomePage> {
                 ...markerXochi,
                 ...markerRuta2,
                 ...markerRuta3,
-                ...markerRuta5
+                ...markerRuta31,
+                ...markerRuta32,
+                ...markerRuta33,
+                ...markerRuta34,
+                ...markerRuta35,
+                ...markerRuta37,
+                ...markerRuta38,
+                ...markerRuta39,
+
+
+
               },
 
               //polylines: //_polylines,
