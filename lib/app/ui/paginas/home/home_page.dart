@@ -192,6 +192,7 @@ class _HomePageState extends State<HomePage> {
                 ...markerRuta47Reg,
                 ...markerRuta49,
                 ...markerRuta49Reg,
+                // print("markHOLA MUNDO")
               },
 
               //polylines: //_polylines,
