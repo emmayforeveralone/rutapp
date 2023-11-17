@@ -10,7 +10,6 @@ import 'package:rutapp/app/datos/ruta37.dart';
 import 'package:rutapp/app/datos/ruta38.dart';
 import 'package:rutapp/app/datos/ruta39.dart';
 
-
 import 'package:rutapp/app/datos/ruta3.dart';
 import 'package:rutapp/app/datos/ruta6.dart';
 // import 'package:rutapp/app/datos/ruta7.dart';
@@ -51,6 +50,7 @@ import 'package:rutapp/app/datos/ruta47.dart';
 import 'package:rutapp/app/datos/ruta47regreso.dart';
 import 'package:rutapp/app/datos/ruta49.dart';
 import 'package:rutapp/app/datos/ruta49regreso.dart';
+import 'package:rutapp/generated/l10n.dart';
 
 class Combi {
   final String nombre;
@@ -59,26 +59,58 @@ class Combi {
   Combi(this.nombre, this.ruta);
 }
 
+const String xochi = "Xochimilco";
+const String dos = "Laureles 2";
+const String tres = "5 de Febrero";
+const String seis = "Bonanza Por Tercera";
+const String ocho = "Bonanza Por la 17";
+const String nueve = "Palmeras";
+const String once = "Montenegro";
+const String doce = "La Joya";
+const String trece = "Framboyanes";
+const String catorce = "Vida Mejor";
+const String quince = "Periferico Izquierda";
+const String dieciseis = "Periferico Derecha";
+const String diecisiete = "Emiliano Zapata Par Vial";
+const String dieciocho = "Los Palacions";
+const String diecinueve = "Seminarista";
+const String veinte = "6 de Enero";
+const String veintiuno = "Lomas de sayula (tecnica 3)";
+const String veintidos = "Colinas del Rey";
+const String veintitres = "Estacion Galaxias";
+const String veintitresE = "Estacion Galaxias Extension";
+const String veinticuatro = "El Vergel";
+const String veinticinco = "Libertad del Carmen";
+const String veintiseis = "Soliradidad 2000";
+const String veintisiete = "Cafetales Vida Mejor";
+const String veintiocho = "Las Vegas Izquierda";
+const String veintinueve = "Las Vegas Derecha";
+const String treinta = "El Porvenir";
+const String treintauno = "Francisco Villa";
+const String treintados = "18 de Octubre";
+const String treintatres = "Teofilo Acebo 1";
+const String treintacuatro = "Confeti";
+const String treintacinco = "5 de Febrero San Juan";
+const String treintasiete = "Las Americas";
+const String treintaocho = "Bonanza por Central";
+const String treintanueve = "Loma Linda";
+const String cuarentaUno = "Nuevo Milenio";
+const String cuarentDos = "Raymundo Enrique";
+
 // Lista de combis
 final List<Combi> listaDeCombis = [
-
-
-
-
-
-
-  Combi('Ruta 5 de Febrero Ida', polylineIDA3), //
-  Combi('Ruta 5 de Febrero Regreso', polylineREGRESO3), //
-  Combi('Ruta 5 de Febrero San Juan ida', polylineIDA35),
-  Combi('Ruta 5 de Febrero San Juan regreso', polylineREGRESO35),
-  Combi('Ruta 6 De Enero Ida', polylineIDA20), //
-  Combi('Ruta 6 de Enero Regreso', polylineI20REGRESO), //
-  Combi('Ruta 18 de Octubre ida ', polylineIDA32),
-  Combi('Ruta 18 de Octubre regreso', polylineREGRESO32),
-  Combi('Ruta Bonanza por Central ida', polylineIDA38),
-  Combi('Ruta Bonanza por Central regreso', polylineREGRESO38),
-  Combi('Ruta Bonanza Por Tercera Ida', polylineIDA6), //
-  Combi('Ruta Bonanza Por Tercera Regreso', polylineIDA6REGRE), //
+  Combi(S().BaseI(tres), polylineIDA3), //
+  Combi(S().BaseR(tres), polylineREGRESO3), //
+  Combi(S().BaseI(treintacinco), polylineIDA35),
+  Combi(S().BaseR(treintacinco), polylineREGRESO35),
+  Combi(S().BaseI(veinte), polylineIDA20), //
+  Combi(S().BaseR(veinte), polylineI20REGRESO), //
+  Combi(S().BaseI(treintados), polylineIDA32),
+  Combi(S().BaseR(treintados), polylineREGRESO32),
+  Combi(S().BaseI(treintaocho), polylineIDA38),
+  Combi(S().BaseR(treintaocho), polylineREGRESO38),
+  Combi(S().BaseI(seis), polylineIDA6), //
+  Combi(S().BaseR(seis), polylineIDA6REGRE), //
   Combi('Ruta Bonanza Regreso Por 17 Ida', polylineIDA8), //
   Combi('Ruta Bonanza Regreso por 17 Regreso', polylineREGRESO8), //
   Combi('Ruta Cafetales Vida mejor Ida', polylineIDA27),
@@ -98,7 +130,7 @@ final List<Combi> listaDeCombis = [
   Combi('Ruta Estacion galaxias', polylineIDA23),
   Combi('Ruta Framboyanes Ida', polylineIDA13), //
   Combi('Ruta Framboyanes Regreso', polyline13REGRESO), //
-  Combi('Ruta Francisco Villa ida', polylineIDA31),
+  Combi('Ruta Francisco Villa', polylineIDA31),
   Combi('Ruta La Joya Ida', polylineIDA12), //
   Combi('Ruta La Joya Regreso', polyline12REGRESO), //
   Combi('Ruta Las Americas ida', polylineIDA37),
@@ -144,10 +176,4 @@ final List<Combi> listaDeCombis = [
   Combi('Ruta Xochimilco Ida', polylineRegreXochi),
   Combi('Ruta Xochimilco Regreso', polylineIdaXochi), // Ruta 1
   Combi('Ruta Zocalo Estacion', polylineIDA44), //
-  
 ];
-
-
-
-
-

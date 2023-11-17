@@ -87,22 +87,22 @@ final Polyline polylineRuta13REGRESO = Polyline(
   points: ruta2,
 );
 
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA13'),
-    position: LatLng(14.904918183876894, -92.27640348441359),
-    infoWindow:
-        InfoWindow(title: "Base de Ida", snippet: "Ruta Framboyanes Ida"));
-Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA3'),
-    position: const LatLng(14.913706085744433, -92.26483031041772),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
-    infoWindow: const InfoWindow(
-        title: "Base de Regreso", snippet: "Ruta Framboyanes Regreso"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA13'),
+//     position: LatLng(14.904918183876894, -92.27640348441359),
+//     infoWindow:
+//         InfoWindow(title: "Base de Ida", snippet: "Ruta Framboyanes Ida"));
+// Marker markerRR = Marker(
+//     markerId: const MarkerId('markerRegresoRUTA3'),
+//     position: const LatLng(14.913706085744433, -92.26483031041772),
+//     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
+//     infoWindow: const InfoWindow(
+//         title: "Base de Regreso", snippet: "Ruta Framboyanes Regreso"));
 
 Set<Polyline> polylineIDA13 = {polylineRuta13};
 Set<Polyline> polyline13REGRESO = {polylineRuta13};
 
-Set<Marker> markerRuta13 = {markerIR, markerRR};
+// Set<Marker> markerRuta13 = {markerIR, markerRR};
 
 List<LatLng> ruta2 = [
   const LatLng(14.904918183876894, -92.27640348441359),

@@ -1,0 +1,11 @@
+{
+    "Ida": "One-Way Basis",
+    "Regreso": "Return Basis",
+    "Ruta": "Route {ruta}",
+    
+    "BaseI": "Route {ruta} Going",
+    "BaseR": "Route {ruta} Return",
+
+    "language": "Language",
+    "systemLanguage": "System Language"
+}

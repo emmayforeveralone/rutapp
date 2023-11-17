@@ -1,0 +1,11 @@
+{
+    "Ida": "Base de départ",
+    "Regreso": "Base de retour",
+    "Ruta": "Itinéraire {ruta}",
+
+    "BaseI": "Itinéraire {ruta} Aller à",
+    "BaseR": "Itinéraire {ruta} Retourner ",
+
+    "language": "Language",
+    "systemLanguage": "System Language"
+}

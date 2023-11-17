@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:rutapp/app/ui/paginas/home/home_page.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:rutapp/generated/l10n.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -17,6 +19,58 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.green),
       home: const HomePage(),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        S.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+
+//   final preferencesRepository = Impl();
+//   final preferencesBloc = PreferencesBloc(
+//     preferenciasRepositorio: preferencesRepository,
+//     initialLocale:
+//         await preferencesRepository.locale ?? const Locale('en', 'US'),
+//   );
+
+//   runApp(MyApp(preferencesBloc: preferencesBloc));
+// }
+
+// class MyApp extends StatelessWidget {
+//   final PreferencesBloc preferencesBloc;
+
+//   const MyApp({Key? key, required this.preferencesBloc}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) => preferencesBloc,
+//       child: BlocBuilder<PreferencesBloc, PreferencesState>(
+//         builder: (context, state) {
+//           return MaterialApp(
+//             title: 'Your App',
+//             locale: state.locale,
+//             localizationsDelegates: const [
+//               // ... Agrega tus localizaciones delegadas aquí ...
+//               GlobalMaterialLocalizations.delegate,
+//               GlobalWidgetsLocalizations.delegate,
+//             ],
+//             supportedLocales: const [
+//               const Locale('en', 'US'),
+//               const Locale('es', 'ES'),
+//               // ... Agrega los idiomas que soportas aquí ...
+//             ],
+//             home: const HomePage(),
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }

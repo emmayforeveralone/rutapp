@@ -59,36 +59,36 @@ final Polyline polylineRuta23RE = Polyline(
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA23'),
-    position: LatLng(14.876678878740666, -92.2997825582719),
-    infoWindow:
-        InfoWindow(title: "Base de Ida", snippet: "Ruta Estacion galaxias"));
-Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA23'),
-    position: const LatLng(14.912704080556866, -92.2677333594763),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-    infoWindow: const InfoWindow(
-        title: "Base de Regreso", snippet: "Ruta Estacion galaxias"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA23'),
+//     position: LatLng(14.876678878740666, -92.2997825582719),
+//     infoWindow:
+//         InfoWindow(title: "Base de Ida", snippet: "Ruta Estacion galaxias"));
+// Marker markerRR = Marker(
+//     markerId: const MarkerId('markerRegresoRUTA23'),
+//     position: const LatLng(14.912704080556866, -92.2677333594763),
+//     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+//     infoWindow: const InfoWindow(
+//         title: "Base de Regreso", snippet: "Ruta Estacion galaxias"));
 
 Set<Polyline> polylineIDA23 = {polylineRuta23};
 Set<Polyline> polylineREGRESO23 = {polylineRuta23RE};
 
-Set<Marker> markerRuta23 = {markerIR, markerRR};
+// Set<Marker> markerRuta23 = {markerIR, markerRR};
 
-Marker markerIRE = const Marker(
-    markerId: MarkerId('markerIdaRUTA23'),
-    position: LatLng(14.931055420435397, -92.24637416953333),
-    infoWindow: InfoWindow(
-        title: "Base de Ida", snippet: "Ruta Estacion galaxias Extension"));
-Marker markerRRE = Marker(
-    markerId: const MarkerId('markerRegresoRUTA23'),
-    position: const LatLng(14.898859923200277, -92.26812431851937),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-    infoWindow: const InfoWindow(
-        title: "Base de Regreso", snippet: "Ruta Estacion galaxias Extension"));
+// Marker markerIRE = const Marker(
+//     markerId: MarkerId('markerIdaRUTA23'),
+//     position: LatLng(14.931055420435397, -92.24637416953333),
+//     infoWindow: InfoWindow(
+//         title: "Base de Ida", snippet: "Ruta Estacion galaxias Extension"));
+// Marker markerRRE = Marker(
+//     markerId: const MarkerId('markerRegresoRUTA23'),
+//     position: const LatLng(14.898859923200277, -92.26812431851937),
+//     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+//     infoWindow: const InfoWindow(
+//         title: "Base de Regreso", snippet: "Ruta Estacion galaxias Extension"));
 
-Set<Marker> markerRuta23Extension = {markerIRE, markerRRE};
+// Set<Marker> markerRuta23Extension = {markerIRE, markerRRE};
 
 List<LatLng> ruta2 = [
   const LatLng(14.931055420435397, -92.24637416953333),

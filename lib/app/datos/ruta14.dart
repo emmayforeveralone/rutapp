@@ -130,33 +130,33 @@ List<LatLng> ruta = [
 const PolylineId polylineRuta14IDA = PolylineId("Ruta 14");
 final Polyline polylineRuta14 = Polyline(
   polylineId: polylineRuta14IDA,
-  color: Colors.pink, // Color de la línea de la ruta
+  color: Colors.purpleAccent, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
 const PolylineId polylineRuta14RE = PolylineId("Ruta 14");
 final Polyline polylineRuta14REGRESO = Polyline(
   polylineId: polylineRuta14RE,
-  color: const Color.fromARGB(255, 0, 189, 28), // Color de la línea de la ruta
+  color: Colors.purpleAccent, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
 
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA14'),
-    position: LatLng(14.868125026628082, -92.30974603465725),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "Ruta Vida Mejor"));
-Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA3'),
-    position: const LatLng(14.915504419647878, -92.26361195680327),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-    infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "Ruta Vida Mejor"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA14'),
+//     position: LatLng(14.868125026628082, -92.30974603465725),
+//     infoWindow: InfoWindow(title: "Base de Ida", snippet: "Ruta Vida Mejor"));
+// Marker markerRR = Marker(
+//     markerId: const MarkerId('markerRegresoRUTA3'),
+//     position: const LatLng(14.915504419647878, -92.26361195680327),
+//     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+//     infoWindow:
+//         const InfoWindow(title: "Base de Regreso", snippet: "Ruta Vida Mejor"));
 
 Set<Polyline> polylineIDA14 = {polylineRuta14};
 Set<Polyline> polyline14REGRESO = {polylineRuta14REGRESO};
 
-Set<Marker> markerRuta14 = {markerIR, markerRR};
+// Set<Marker> markerRuta14 = {markerIR, markerRR};
 
 List<LatLng> ruta2 = [
   const LatLng(14.868125026628082, -92.30974603465725),

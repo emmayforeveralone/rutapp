@@ -75,11 +75,11 @@ final Polyline polylineRuta6 = Polyline(
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA6'),
-    position: LatLng(14.900038387213106, -92.24218549585548),
-    infoWindow: InfoWindow(
-        title: "Base de Ida", snippet: "Ruta Bonanza Regreso Por Tercera"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA6'),
+//     position: LatLng(14.900038387213106, -92.24218549585548),
+//     infoWindow: InfoWindow(
+//         title: "Base de Ida", snippet: "Ruta Bonanza Regreso Por Tercera"));
 
 List<LatLng> ruta2 = [
   const LatLng(14.910304392332062, -92.25895969025628),
@@ -141,13 +141,13 @@ final Polyline polylineRuta6REGRE = Polyline(
   points: ruta2,
 );
 
-Marker markerRR = const Marker(
-    markerId: MarkerId('markerRegresoRUTA5'),
-    position: LatLng(14.910304392332062, -92.25895969025628),
-    infoWindow: InfoWindow(
-        title: "Base de Regreso", snippet: "Ruta Bonanza Por Tercera"));
+// Marker markerRR = const Marker(
+//     markerId: MarkerId('markerRegresoRUTA5'),
+//     position: LatLng(14.910304392332062, -92.25895969025628),
+//     infoWindow: InfoWindow(
+//         title: "Base de Regreso", snippet: "Ruta Bonanza Por Tercera"));
 
 Set<Polyline> polylineIDA6 = {polylineRuta6};
 Set<Polyline> polylineIDA6REGRE = {polylineRuta6REGRE};
 
-Set<Marker> markerRuta6 = {markerIR, markerRR};
+// Set<Marker> markerRuta6 = {markerIR, markerRR};

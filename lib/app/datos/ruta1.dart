@@ -41,16 +41,15 @@ final Polyline polylineRX = Polyline(
   width: 5, // Ancho de la línea de la ruta
   points: routeCoordinatesXochimilcoREGRESO,
 );
-Marker markerIX = const Marker(
-    markerId: MarkerId('marker'),
-    position: LatLng(14.944155, -92.256285),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA XOCHIMILCO"));
+// Marker markerIX = const Marker(
+//     markerId: MarkerId('marker'),
+//     position: LatLng(14.944155, -92.256285),
+//     infoWindow: InfoWindow(title: "", snippet: "RUTA XOCHIMILCO"));
 
-Marker markerRX = const Marker(
-    markerId: MarkerId('marker'),
-    position: LatLng(14.911874, -92.264891),
-    infoWindow:
-        InfoWindow(title: "Base de Regreso", snippet: "RUTA XOCHIMILCO"));
+// Marker markerRX = const Marker(
+//     markerId: MarkerId('marker'),
+//     position: LatLng(14.911874, -92.264891),
+//     infoWindow: InfoWindow(title: "", snippet: "RUTA XOCHIMILCO"));
 
 final List<LatLng> rutaIDA = [
   const LatLng(14.94426545049227, -92.25631656827763),
@@ -123,4 +122,4 @@ final Polyline polylineR = Polyline(
 Set<Polyline> polylineIdaXochi = {polylineRX};
 Set<Polyline> polylineRegreXochi = {polylineR};
 
-Set<Marker> markerXochi = {markerIX, markerRX};
+// Set<Marker> markerXochi = {markerIX, markerRX};

@@ -36,7 +36,8 @@ List<LatLng> ruta = [
 const PolylineId polylineRuta46IDA = PolylineId("Ruta 46");
 final Polyline polylineRuta46 = Polyline(
   polylineId: polylineRuta46IDA,
-  color: Color.fromARGB(255, 237, 172, 10), // Color de la línea de la ruta
+  color:
+      const Color.fromARGB(255, 237, 172, 10), // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );

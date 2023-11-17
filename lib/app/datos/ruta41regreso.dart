@@ -93,7 +93,7 @@ List<LatLng> ruta = [
 const PolylineId polylineI41Regreso = PolylineId("Ruta 41 Regreso");
 final Polyline polylineRuta41R = Polyline(
   polylineId: polylineI41Regreso,
-  color: Color.fromARGB(255, 96, 58, 249), // Color de la línea de la ruta
+  color: const Color.fromARGB(255, 96, 58, 249), // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
@@ -101,13 +101,13 @@ final Polyline polylineRuta41R = Polyline(
 //     markerId: MarkerId('markerIdaRUTA41R'),
 //     position: LatLng(14.88687818711857, -92.30965664285092 ),
 //     infoWindow: InfoWindow(title: "Base de Ida", snippet: "RUTA IDA 41"));
-Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA41R'),
-    position: const LatLng(14.905065444604146, -92.26935903480027),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
-    infoWindow: const InfoWindow(
-        title: "Base de Regreso", snippet: "Ruta Nuevo Milenio"));
+// Marker markerRR = Marker(
+//     markerId: const MarkerId('markerRegresoRUTA41R'),
+//     position: const LatLng(14.905065444604146, -92.26935903480027),
+//     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+//     infoWindow: const InfoWindow(
+//         title: "Base de Regreso", snippet: "Ruta Nuevo Milenio"));
 
 Set<Polyline> polylineIDA41Regreso = {polylineRuta41R};
 
-Set<Marker> markerRuta41Reg = {markerRR};
+// Set<Marker> markerRuta41Reg = {markerRR};

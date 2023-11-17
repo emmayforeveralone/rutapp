@@ -31,7 +31,7 @@ List<LatLng> ruta = [
 const PolylineId polylineRuta25IDA = PolylineId("Ruta 25");
 final Polyline polylineRuta25 = Polyline(
   polylineId: polylineRuta25IDA,
-  color: Colors.purpleAccent.shade700, // Color de la línea de la ruta
+  color: Colors.pink, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
@@ -42,22 +42,22 @@ final Polyline polylineRuta25RE = Polyline(
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA25'),
-    position: LatLng(14.911497383602342, -92.26578511608048),
-    infoWindow:
-        InfoWindow(title: "Base de Ida", snippet: "Ruta Libertad el carmen"));
-Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA3'),
-    position: const LatLng(14.891930739344135, -92.29756901704991),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-    infoWindow: const InfoWindow(
-        title: "Base de Regreso", snippet: "Ruta Libertad el carmen"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA25'),
+//     position: LatLng(14.911497383602342, -92.26578511608048),
+//     infoWindow:
+//         InfoWindow(title: "Base de Ida", snippet: "Ruta Libertad el carmen"));
+// Marker markerRR = Marker(
+//     markerId: const MarkerId('markerRegresoRUTA3'),
+//     position: const LatLng(14.891930739344135, -92.29756901704991),
+//     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+//     infoWindow: const InfoWindow(
+//         title: "Base de Regreso", snippet: "Ruta Libertad el carmen"));
 
 Set<Polyline> polylineIDA25 = {polylineRuta25};
 Set<Polyline> polylineREGRESO25 = {polylineRuta25RE};
 
-Set<Marker> markerRuta25 = {markerIR, markerRR};
+// Set<Marker> markerRuta25 = {markerIR, markerRR};
 
 List<LatLng> ruta2 = [
   const LatLng(14.911497383602342, -92.26578511608048),

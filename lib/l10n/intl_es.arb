@@ -1,0 +1,11 @@
+{
+    "Ida": "Base de Ida",
+    "Regreso": "Base de regreso",
+    "Ruta": "Ruta {ruta}",
+
+    "BaseI": "Ruta {ruta} Ida",
+    "BaseR": "Ruta {ruta} Regreso",
+
+    "language": "Idioma",
+    "systemLanguage": "Idioma del Sistema"
+}

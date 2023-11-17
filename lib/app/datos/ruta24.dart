@@ -43,32 +43,32 @@ List<LatLng> ruta = [
 const PolylineId polylineRuta24IDA = PolylineId("Ruta 24");
 final Polyline polylineRuta24 = Polyline(
   polylineId: polylineRuta24IDA,
-  color: Colors.brown.shade700, // Color de la línea de la ruta
+  color: Colors.greenAccent, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
 const PolylineId polylineRuta24REGRESO = PolylineId("Ruta 24");
 final Polyline polylineRuta24RE = Polyline(
   polylineId: polylineRuta24REGRESO,
-  color: Colors.indigoAccent.shade700, // Color de la línea de la ruta
+  color: Colors.greenAccent, // Color de la línea de la ruta
   width: 5, // Ancho de la línea de la ruta
   points: ruta2,
 );
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA24'),
-    position: LatLng(14.926859866457542, -92.26991807774965),
-    infoWindow: InfoWindow(title: "Base de Ida", snippet: "Ruta El vergel"));
-Marker markerRR = Marker(
-    markerId: const MarkerId('markerRegresoRUTA24'),
-    position: const LatLng(14.91565480614814, -92.26524535356685),
-    icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-    infoWindow:
-        const InfoWindow(title: "Base de Regreso", snippet: "Ruta El vergel'"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA24'),
+//     position: LatLng(14.926859866457542, -92.26991807774965),
+//     infoWindow: InfoWindow(title: "Base de Ida", snippet: "Ruta El vergel"));
+// Marker markerRR = Marker(
+//     markerId: const MarkerId('markerRegresoRUTA24'),
+//     position: const LatLng(14.91565480614814, -92.26524535356685),
+//     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+//     infoWindow:
+//         const InfoWindow(title: "Base de Regreso", snippet: "Ruta El vergel'"));
 
 Set<Polyline> polylineIDA24 = {polylineRuta24};
 Set<Polyline> polylineREGRESO24 = {polylineRuta24RE};
 
-Set<Marker> markerRuta24 = {markerIR, markerRR};
+// Set<Marker> markerRuta24 = {markerIR, markerRR};
 
 List<LatLng> ruta2 = [
   const LatLng(14.91565480614814, -92.26524535356685),
