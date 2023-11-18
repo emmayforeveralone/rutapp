@@ -100,6 +100,46 @@ class S {
     );
   }
 
+  /// `Ruta {ruta} Derecha`
+  String BaseDer(Object ruta) {
+    return Intl.message(
+      'Ruta $ruta Derecha',
+      name: 'BaseDer',
+      desc: '',
+      args: [ruta],
+    );
+  }
+
+  /// `Ruta {ruta} Izquiera`
+  String BaseIzq(Object ruta) {
+    return Intl.message(
+      'Ruta $ruta Izquiera',
+      name: 'BaseIzq',
+      desc: '',
+      args: [ruta],
+    );
+  }
+
+  /// `Selecciona una Combi`
+  String get Combi {
+    return Intl.message(
+      'Selecciona una Combi',
+      name: 'Combi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mapa 3D`
+  String get Mapa {
+    return Intl.message(
+      'Mapa 3D',
+      name: 'Mapa',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Idioma`
   String get language {
     return Intl.message(

@@ -72,10 +72,10 @@ const String catorce = "Vida Mejor";
 const String quince = "Periferico Izquierda";
 const String dieciseis = "Periferico Derecha";
 const String diecisiete = "Emiliano Zapata Par Vial";
-const String dieciocho = "Los Palacions";
+const String dieciocho = "Los Palacios";
 const String diecinueve = "Seminarista";
 const String veinte = "6 de Enero";
-const String veintiuno = "Lomas de sayula (tecnica 3)";
+const String veintiuno = "Lomas de Sayula (tecnica 3)";
 const String veintidos = "Colinas del Rey";
 const String veintitres = "Estacion Galaxias";
 const String veintitresE = "Estacion Galaxias Extension";
@@ -111,69 +111,69 @@ final List<Combi> listaDeCombis = [
   Combi(S().BaseR(treintaocho), polylineREGRESO38),
   Combi(S().BaseI(seis), polylineIDA6), //
   Combi(S().BaseR(seis), polylineIDA6REGRE), //
-  Combi('Ruta Bonanza Regreso Por 17 Ida', polylineIDA8), //
-  Combi('Ruta Bonanza Regreso por 17 Regreso', polylineREGRESO8), //
-  Combi('Ruta Cafetales Vida mejor Ida', polylineIDA27),
-  Combi('Ruta Cafetales Vida mejor Regreso', polylineREGRESO27),
-  Combi('Ruta Colinas del rey Ida', polylineIDA22),
-  Combi('Ruta Colinas del rey Regreso', polylineREGRESO22),
-  Combi('Ruta Confeti ida', polylineIDA34),
-  Combi('Ruta Confeti regreso', polylineREGRESO34),
-  Combi('Ruta El Porvenir Ida', polylineIDA30),
-  Combi('Ruta El Porvenir Regreso', polylineREGRESO30),
-  Combi('Ruta El vergel Ida', polylineIDA24),
-  Combi('Ruta El vergel Regreso', polylineREGRESO24),
-  Combi('Ruta Emiliano Zapata Par Vial Ida', polylineIDA17), //
-  Combi('Ruta Emiliano Zapata Par Vial Regreso', polyline17REGRESO), //
+  Combi(S().BaseI(ocho), polylineIDA8), //
+  Combi(S().BaseR(ocho), polylineREGRESO8), //
+  Combi(S().BaseI(veintisiete), polylineIDA27),
+  Combi(S().BaseR(veintisiete), polylineREGRESO27),
+  Combi(S().BaseI(veintidos), polylineIDA22),
+  Combi(S().BaseR(veintidos), polylineREGRESO22),
+  Combi(S().BaseI(treintacuatro), polylineIDA34),
+  Combi(S().BaseR(treintacuatro), polylineREGRESO34),
+  Combi(S().BaseI(treinta), polylineIDA30),
+  Combi(S().BaseR(treinta), polylineREGRESO30),
+  Combi(S().BaseI(veinticuatro), polylineIDA24),
+  Combi(S().BaseR(veinticuatro), polylineREGRESO24),
+  Combi(S().BaseI(diecisiete), polylineIDA17), //
+  Combi(S().BaseR(diecisiete), polyline17REGRESO), //
   Combi('Ruta Emiliano Zapata', polylineIDA45), //
-  Combi('Ruta Estacion galaxias Extension', polylineREGRESO23),
-  Combi('Ruta Estacion galaxias', polylineIDA23),
-  Combi('Ruta Framboyanes Ida', polylineIDA13), //
-  Combi('Ruta Framboyanes Regreso', polyline13REGRESO), //
-  Combi('Ruta Francisco Villa', polylineIDA31),
-  Combi('Ruta La Joya Ida', polylineIDA12), //
-  Combi('Ruta La Joya Regreso', polyline12REGRESO), //
-  Combi('Ruta Las Americas ida', polylineIDA37),
-  Combi('Ruta Las Americas regreso', polylineREGRESO37),
-  Combi('Ruta Las vegas derecha Ida', polylineIDA29),
-  Combi('Ruta Las vegas derecha Regreso', polylineREGRESO29),
-  Combi('Ruta Las vegas izquierda Ida', polylineIDA28),
-  Combi('Ruta Las vegas izquierda Regreso', polylineREGRESO28),
-  Combi('RUTA Laureles 2 Ida', polylineIDA2), // Ruta 2
-  Combi('Ruta Laureles 2 Regreso', polylineREGRESO2), //
-  Combi('Ruta Libertad el carmen Ida', polylineIDA25),
-  Combi('Ruta Libertad el carmen Regreso', polylineREGRESO25),
-  Combi('Ruta Loma Linda ida', polylineIDA39),
-  Combi('Ruta Loma Linda regreso', polylineREGRESO39),
-  Combi('Ruta Lomas de sayula (tecnica 3) Ida', polylineIDA21),
-  Combi('Ruta Lomas de sayula (tecnica 3) Regreso', polylineREGRESO21),
-  Combi('Ruta Los Palacios Ida', polylineIDA18), //
-  Combi('Ruta Los Palacios Regreso', polyline18REGRESO), //
-  Combi('Ruta Montenegro Ida', polylineIDA11), //
-  Combi('Ruta Montenegro Regreso', polyline11REGRESO), //
-  Combi('Ruta Nuevo Milenio Ida', polylineIDA41), //
-  Combi('Ruta Nuevo Milenio Regreso', polylineIDA41Regreso), //
-  Combi('Ruta Palmeras Derecha', polylineIDA9), //
-  Combi('Ruta Palmeras Izquierda', polylineREGRESO9), //
-  Combi('Ruta Periferico Derecha', polylineIDA16), //
-  Combi('Ruta Periferico Izquierda', polylineIDA15), //
-  Combi('Ruta Ray Mundo Enrique Ida', polylineIDA42), //
-  Combi('Ruta Ray Mundo Enrique Regreso', polylineIDA42Regreso), //
-  Combi('Ruta Seminarista Ida', polylineIDA19), //
-  Combi('Ruta Seminarista Regreso', polyline19REGRESO), //
-  Combi('Ruta Solidaridad 2000', polyline26),
+  Combi(S().Ruta(veintitresE), polylineREGRESO23),
+  Combi(S().Ruta(veintitres), polylineIDA23),
+  Combi(S().BaseI(trece), polylineIDA13), //
+  Combi(S().BaseR(trece), polyline13REGRESO), //
+  Combi(S().Ruta(treintauno), polylineIDA31),
+  Combi(S().BaseI(doce), polylineIDA12), //
+  Combi(S().BaseR(doce), polyline12REGRESO), //
+  Combi(S().BaseI(treintasiete), polylineIDA37),
+  Combi(S().BaseR(treintasiete), polylineREGRESO37),
+  Combi(S().BaseI(veintinueve), polylineIDA29),
+  Combi(S().BaseR(veintinueve), polylineREGRESO29),
+  Combi(S().BaseI(veintiocho), polylineIDA28),
+  Combi(S().BaseR(veintiocho), polylineREGRESO28),
+  Combi(S().BaseI(dos), polylineIDA2), // Ruta 2
+  Combi(S().BaseR(dos), polylineREGRESO2), //
+  Combi(S().BaseI(veinticinco), polylineIDA25),
+  Combi(S().BaseR(veinticinco), polylineREGRESO25),
+  Combi(S().BaseI(treintanueve), polylineIDA39),
+  Combi(S().BaseR(treintanueve), polylineREGRESO39),
+  Combi(S().BaseI(veintiuno), polylineIDA21),
+  Combi(S().BaseR(veintiuno), polylineREGRESO21),
+  Combi(S().BaseI(dieciocho), polylineIDA18), //
+  Combi(S().BaseR(dieciocho), polyline18REGRESO), //
+  Combi(S().BaseI(once), polylineIDA11), //
+  Combi(S().BaseR(once), polyline11REGRESO), //
+  Combi(S().BaseI(cuarentaUno), polylineIDA41), //
+  Combi(S().BaseR(cuarentaUno), polylineIDA41Regreso), //
+  Combi(S().BaseDer(nueve), polylineIDA9), //
+  Combi(S().BaseIzq(nueve), polylineREGRESO9), //
+  Combi(S().Ruta(dieciseis), polylineIDA16), //
+  Combi(S().Ruta(quince), polylineIDA15), //
+  Combi(S().BaseI(cuarentDos), polylineIDA42), //
+  Combi(S().BaseR(cuarentDos), polylineIDA42Regreso), //
+  Combi(S().BaseI(diecinueve), polylineIDA19), //
+  Combi(S().BaseR(diecinueve), polyline19REGRESO), //
+  Combi(S().Ruta(veintiseis), polyline26),
   Combi('Ruta Tecnica 3 Ida', polylineIDA43), //
   Combi('Ruta Tecnica 3 Regreso', polylineIDA43Regreso), //
   Combi('Ruta Teofilio Acebo', polylineIDA46), //
-  Combi('Ruta Teofilo Acebo 1 ida', polylineIDA33),
-  Combi('Ruta Teofilo Acebo 1 regreso', polylineREGRESO33),
+  Combi(S().BaseI(treintatres), polylineIDA33),
+  Combi(S().BaseR(treintatres), polylineREGRESO33),
   Combi('Ruta Unidad Administrativa Ida', polylineIDA49), //
   Combi('Ruta Unidad Administrativa Regreso', polylineIDA49Regreso), //
   Combi('Ruta Venustiano Carranza Ida', polylineIDA47), //
   Combi('Ruta Venustiano Carranza Regreso', polylineIDA47Regreso), //
-  Combi('Ruta Vida Mejor Ida', polylineIDA14), //
-  Combi('Ruta Vida Mejor Regreso', polyline14REGRESO), //
-  Combi('Ruta Xochimilco Ida', polylineRegreXochi),
-  Combi('Ruta Xochimilco Regreso', polylineIdaXochi), // Ruta 1
+  Combi(S().BaseI(catorce), polylineIDA14), //
+  Combi(S().BaseR(catorce), polyline14REGRESO), //
+  Combi(S().BaseI(xochi), polylineRegreXochi),
+  Combi(S().BaseR(xochi), polylineIdaXochi), // Ruta 1
   Combi('Ruta Zocalo Estacion', polylineIDA44), //
 ];

@@ -20,19 +20,27 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es';
 
-  static String m0(ruta) => "Ruta ${ruta} Ida";
+  static String m0(ruta) => "Ruta ${ruta} Derecha";
 
-  static String m1(ruta) => "Ruta ${ruta} Regreso";
+  static String m1(ruta) => "Ruta ${ruta} Ida";
 
-  static String m2(ruta) => "Ruta ${ruta}";
+  static String m2(ruta) => "Ruta ${ruta} Izquiera";
+
+  static String m3(ruta) => "Ruta ${ruta} Regreso";
+
+  static String m4(ruta) => "Ruta ${ruta}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "BaseI": m0,
-        "BaseR": m1,
+        "BaseDer": m0,
+        "BaseI": m1,
+        "BaseIzq": m2,
+        "BaseR": m3,
+        "Combi": MessageLookupByLibrary.simpleMessage("Selecciona una Combi"),
         "Ida": MessageLookupByLibrary.simpleMessage("Base de Ida"),
+        "Mapa": MessageLookupByLibrary.simpleMessage("Mapa 3D"),
         "Regreso": MessageLookupByLibrary.simpleMessage("Base de regreso"),
-        "Ruta": m2,
+        "Ruta": m4,
         "language": MessageLookupByLibrary.simpleMessage("Idioma"),
         "systemLanguage":
             MessageLookupByLibrary.simpleMessage("Idioma del Sistema")

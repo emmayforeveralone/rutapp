@@ -6,6 +6,13 @@
     "BaseI": "Route {ruta} Going",
     "BaseR": "Route {ruta} Return",
 
+    "BaseDer": "Route {ruta} Right",
+    "BaseIzq": "Route {ruta} Left",
+
+    "Combi": "Select a Combi",
+
+    "Mapa": "Map 3D",
+
     "language": "Language",
     "systemLanguage": "System Language"
 }

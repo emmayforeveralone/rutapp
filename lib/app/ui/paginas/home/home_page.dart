@@ -67,6 +67,7 @@ class _HomePageState extends State<HomePage> {
   final Completer<GoogleMapController> _controller = Completer();
   String? _combiSeleccionada;
   S marcadorXochimilco = S();
+  S com = S();
 
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(14.90385, -92.25749),
@@ -122,8 +123,8 @@ class _HomePageState extends State<HomePage> {
               );
             }).toList(),
             menuMaxHeight: 300.0,
-            decoration: const InputDecoration(
-              labelText: 'Selecciona una Combi De Ida',
+            decoration: InputDecoration(
+              labelText: S().Combi,
             ),
           ),
           Expanded(
@@ -209,7 +210,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _goToTheLake,
-        label: const Text('Mapa 3D'),
+        label: Text(S().Mapa),
         icon: const Icon(Icons.zoom_out_map_sharp),
       ),
     );

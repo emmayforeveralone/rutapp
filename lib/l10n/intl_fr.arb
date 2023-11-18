@@ -6,6 +6,14 @@
     "BaseI": "Itinéraire {ruta} Aller à",
     "BaseR": "Itinéraire {ruta} Retourner ",
 
+    "BaseDer": "Itinéraire {ruta} Droite",
+    "BaseIzq": "Itinéraire {ruta} Gauche",
+
+    "Combi": "Sélectionnez un Combi",
+
+    "Mapa": "Carte 3D",
+
+
     "language": "Language",
     "systemLanguage": "System Language"
 }

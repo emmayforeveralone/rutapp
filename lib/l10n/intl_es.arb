@@ -6,6 +6,13 @@
     "BaseI": "Ruta {ruta} Ida",
     "BaseR": "Ruta {ruta} Regreso",
 
+    "BaseDer": "Ruta {ruta} Derecha",
+    "BaseIzq": "Ruta {ruta} Izquiera",
+
+    "Combi": "Selecciona una Combi",
+
+    "Mapa": "Mapa 3D",
+
     "language": "Idioma",
     "systemLanguage": "Idioma del Sistema"
 }
