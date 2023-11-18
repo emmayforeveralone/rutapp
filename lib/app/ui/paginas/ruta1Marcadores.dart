@@ -41,6 +41,12 @@ class MarkersWidget extends StatelessWidget {
   final String treintanueve = "Loma Linda";
   final String cuarentaUno = "Nuevo Milenio";
   final String cuarentDos = "Raymundo Enrique";
+  final String cuarentTres = "Tecnica 3";
+  final String cuarentCuatro = "Zocalo Estacion";
+  final String cuarentCinco = "Emiliano Zapata";
+  final String cuarentSeis = "Teofilio Acebo";
+  final String cuarentSiete = "Venustiano Carranza";
+  final String cuarentNueve = "Unidad Administrativa";
 
   const MarkersWidget(this.marcadorUno, {super.key});
 
@@ -564,6 +570,115 @@ class MarkersWidget extends StatelessWidget {
         infoWindow: InfoWindow(
             title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentDos)));
 
+    ////// RUTA 43
+    Marker markerITecnica = Marker(
+        markerId: const MarkerId('markerIdaRUTA43'),
+        position: const LatLng(14.911732301338352, -92.26489217505592),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentTres)));
+    Marker markerRTecnica = Marker(
+        markerId: const MarkerId('markerRegresoRUTA43'),
+        position: const LatLng(14.9157588292443, -92.23907263677798),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentTres)));
+
+    ////// RUTA 44
+    Marker markerIZocalo = Marker(
+        markerId: const MarkerId('markerIdaRUTA44'),
+        position: const LatLng(14.898808585226764, -92.26816802083115),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentCuatro)));
+    Marker markerRZocalo = Marker(
+        markerId: const MarkerId('markerRegresoRUTA44'),
+        position: const LatLng(14.9107645662752, -92.26182457089368),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentCuatro)));
+
+    /////// RUTA 45
+    Marker markerIZapata = Marker(
+        markerId: const MarkerId('markerIdaRUTA45'),
+        position: const LatLng(14.890119393865326, -92.26613108525414),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentCinco)));
+    Marker markerRZapata = Marker(
+        markerId: const MarkerId('markerRegresoRUTA45'),
+        position: const LatLng(14.890182165398828, -92.26669081615206),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentCinco)));
+
+    ////// RUTA 46
+    Marker markerIAcebo = Marker(
+        markerId: const MarkerId('markerIdaRUTA46'),
+        position: const LatLng(14.890174911732707, -92.26636199352828),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentSeis)));
+    Marker markerRAcebo = Marker(
+        markerId: const MarkerId('markerRegresoRUTA46'),
+        position: const LatLng(14.890153114507369, -92.2663755263026),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentSeis)));
+
+    ////// RUTA 47
+    Marker markerIVenustiano = Marker(
+        markerId: const MarkerId('markerIdaRUTA47'),
+        position: const LatLng(14.884064037515538, -92.24828062922347),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentSiete)));
+    Marker markerRVenustiano = Marker(
+        markerId: const MarkerId('markerRegresoRUTA47'),
+        position: const LatLng(14.912637422975234, -92.26508372619396),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentSiete)));
+
+    //// REGRESO
+    Marker markerIVenustianoR = Marker(
+        markerId: const MarkerId('markerIdaRUTA47R'),
+        position: const LatLng(14.884064037515538, -92.24828062922347),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentSiete)));
+    Marker markerRVenustianoR = Marker(
+        markerId: const MarkerId('markerRegresoRUTA47R'),
+        position: const LatLng(14.908718861503216, -92.2669136085503),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentSiete)));
+
+    ///// RUTA 49
+    Marker markerIUnidad = Marker(
+        markerId: const MarkerId('markerIdaRUTA49'),
+        position: const LatLng(14.911521204074448, -92.26582914732838),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentNueve)));
+    Marker markerRUnidad = Marker(
+        markerId: const MarkerId('markerRegresoRUTA49'),
+        position: const LatLng(14.893724198569963, -92.26979771402520),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentNueve)));
+    //// REGRESO
+    Marker markerIUnidadR = Marker(
+        markerId: const MarkerId('markerIdaRUTA49'),
+        position: const LatLng(14.911521204074448, -92.26582914732838),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentNueve)));
+    Marker markerRUnidadR = Marker(
+        markerId: const MarkerId('markerRegresoRUTA49'),
+        position: const LatLng(14.893724198569963, -92.2697977140252),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso,
+            snippet: marcadorUno.Ruta(cuarentNueve)));
+
     markers.add(markerIX);
     markers.add(markerRX);
     //
@@ -674,6 +789,28 @@ class MarkersWidget extends StatelessWidget {
     //
     markers.add(markerIRaymundo);
     markers.add(markerRRaymundo);
+    //
+    markers.add(markerITecnica);
+    markers.add(markerRTecnica);
+    //
+    markers.add(markerIZocalo);
+    markers.add(markerRZocalo);
+    //
+    markers.add(markerIZapata);
+    markers.add(markerRZapata);
+    //
+    markers.add(markerIAcebo);
+    markers.add(markerRAcebo);
+    //
+    markers.add(markerIVenustiano);
+    markers.add(markerRVenustiano);
+    markers.add(markerIVenustianoR);
+    markers.add(markerRVenustianoR);
+    //
+    markers.add(markerIUnidad);
+    markers.add(markerRUnidad);
+    markers.add(markerIUnidadR);
+    markers.add(markerRUnidadR);
 
     return markers;
   }

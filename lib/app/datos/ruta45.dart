@@ -34,17 +34,17 @@ final Polyline polylineRuta45 = Polyline(
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA45'),
-    position: LatLng(14.890119393865326, -92.26613108525414),
-    infoWindow:
-        InfoWindow(title: "Base de Ida", snippet: "Ruta Emiliano Zapata"));
-Marker markerRR = const Marker(
-    markerId: MarkerId('markerRegresoRUTA45'),
-    position: LatLng(14.890182165398828, -92.26669081615206),
-    infoWindow:
-        InfoWindow(title: "Base de Regreso", snippet: "Ruta Emiliano Zapata"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA45'),
+//     position: LatLng(14.890119393865326, -92.26613108525414),
+//     infoWindow:
+//         InfoWindow(title: "Base de Ida", snippet: "Ruta Emiliano Zapata"));
+// Marker markerRR = const Marker(
+//     markerId: MarkerId('markerRegresoRUTA45'),
+//     position: LatLng(14.890182165398828, -92.26669081615206),
+//     infoWindow:
+//         InfoWindow(title: "Base de Regreso", snippet: "Ruta Emiliano Zapata"));
 
 Set<Polyline> polylineIDA45 = {polylineRuta45};
 
-Set<Marker> markerRuta45 = {markerIR, markerRR};
+// Set<Marker> markerRuta45 = {markerIR, markerRR};

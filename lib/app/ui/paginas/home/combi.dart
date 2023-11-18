@@ -96,6 +96,12 @@ const String treintaocho = "Bonanza por Central";
 const String treintanueve = "Loma Linda";
 const String cuarentaUno = "Nuevo Milenio";
 const String cuarentDos = "Raymundo Enrique";
+const String cuarentTres = "Tecnica 3";
+const String cuarentCuatro = "Zocalo Estacion";
+const String cuarentCinco = "Emiliano Zapata";
+const String cuarentSeis = "Teofilio Acebo";
+const String cuarentSiete = "Venustiano Carranza";
+const String cuarentNueve = "Unidad Administrativa";
 
 // Lista de combis
 final List<Combi> listaDeCombis = [
@@ -125,7 +131,7 @@ final List<Combi> listaDeCombis = [
   Combi(S().BaseR(veinticuatro), polylineREGRESO24),
   Combi(S().BaseI(diecisiete), polylineIDA17), //
   Combi(S().BaseR(diecisiete), polyline17REGRESO), //
-  Combi('Ruta Emiliano Zapata', polylineIDA45), //
+  Combi(S().Ruta(cuarentCinco), polylineIDA45), //
   Combi(S().Ruta(veintitresE), polylineREGRESO23),
   Combi(S().Ruta(veintitres), polylineIDA23),
   Combi(S().BaseI(trece), polylineIDA13), //
@@ -162,18 +168,18 @@ final List<Combi> listaDeCombis = [
   Combi(S().BaseI(diecinueve), polylineIDA19), //
   Combi(S().BaseR(diecinueve), polyline19REGRESO), //
   Combi(S().Ruta(veintiseis), polyline26),
-  Combi('Ruta Tecnica 3 Ida', polylineIDA43), //
-  Combi('Ruta Tecnica 3 Regreso', polylineIDA43Regreso), //
-  Combi('Ruta Teofilio Acebo', polylineIDA46), //
+  Combi(S().BaseI(cuarentTres), polylineIDA43), //
+  Combi(S().BaseR(cuarentTres), polylineIDA43Regreso), //
+  Combi(S().Ruta(cuarentSeis), polylineIDA46), //
   Combi(S().BaseI(treintatres), polylineIDA33),
   Combi(S().BaseR(treintatres), polylineREGRESO33),
-  Combi('Ruta Unidad Administrativa Ida', polylineIDA49), //
-  Combi('Ruta Unidad Administrativa Regreso', polylineIDA49Regreso), //
-  Combi('Ruta Venustiano Carranza Ida', polylineIDA47), //
-  Combi('Ruta Venustiano Carranza Regreso', polylineIDA47Regreso), //
+  Combi(S().BaseI(cuarentNueve), polylineIDA49), //
+  Combi(S().BaseR(cuarentNueve), polylineIDA49Regreso), //
+  Combi(S().BaseI(cuarentSiete), polylineIDA47), //
+  Combi(S().BaseR(cuarentSiete), polylineIDA47Regreso), //
   Combi(S().BaseI(catorce), polylineIDA14), //
   Combi(S().BaseR(catorce), polyline14REGRESO), //
   Combi(S().BaseI(xochi), polylineRegreXochi),
   Combi(S().BaseR(xochi), polylineIdaXochi), // Ruta 1
-  Combi('Ruta Zocalo Estacion', polylineIDA44), //
+  Combi(S().Ruta(cuarentCuatro), polylineIDA44), //
 ];

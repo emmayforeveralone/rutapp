@@ -67,17 +67,17 @@ final Polyline polylineRuta49Ida = Polyline(
   width: 5, // Ancho de la línea de la ruta
   points: ruta,
 );
-Marker markerIR = const Marker(
-    markerId: MarkerId('markerIdaRUTA49'),
-    position: LatLng(14.911521204074448, -92.26582914732838),
-    infoWindow: InfoWindow(
-        title: "Base de Ida", snippet: "Ruta Unidad Administrativa"));
-Marker markerRR = const Marker(
-    markerId: MarkerId('markerRegresoRUTA49'),
-    position: LatLng(14.893724198569963, -92.26979771402520),
-    infoWindow: InfoWindow(
-        title: "Base de Regreso", snippet: "Ruta Unidad Administrativa"));
+// Marker markerIR = const Marker(
+//     markerId: MarkerId('markerIdaRUTA49'),
+//     position: LatLng(14.911521204074448, -92.26582914732838),
+//     infoWindow: InfoWindow(
+//         title: "Base de Ida", snippet: "Ruta Unidad Administrativa"));
+// Marker markerRR = const Marker(
+//     markerId: MarkerId('markerRegresoRUTA49'),
+//     position: LatLng(14.893724198569963, -92.26979771402520),
+//     infoWindow: InfoWindow(
+//         title: "Base de Regreso", snippet: "Ruta Unidad Administrativa"));
 
 Set<Polyline> polylineIDA49 = {polylineRuta49Ida};
 
-Set<Marker> markerRuta49 = {markerIR, markerRR};
+// Set<Marker> markerRuta49 = {markerIR, markerRR};
