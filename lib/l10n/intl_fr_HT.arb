@@ -1,0 +1,18 @@
+{
+    "Ida": "Baz Alé",
+    "Regreso": "Baz Tounen",
+    "Ruta": "Wout {ruta}",
+    
+    "BaseI": "Wout {ruta} Alé",
+    "BaseR": "Wout {ruta} Tounen",
+
+    "BaseDer": "Wout {ruta} Dwa",
+    "BaseIzq": "Wout {ruta} Goche",
+
+    "Combi": "Chwazi yon Combi",
+
+    "Mapa": "Kat 3D",
+
+    "language": "Lang",
+    "systemLanguage": "Lang Sistèm"
+}
