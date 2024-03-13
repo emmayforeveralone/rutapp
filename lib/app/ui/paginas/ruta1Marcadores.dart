@@ -3,6 +3,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rutapp/generated/l10n.dart';
 
 class MarkersWidget extends StatelessWidget {
+  final BuildContext context;
+
   final S marcadorUno;
   final String xochi = "Xochimilco";
   final String dos = "Laureles 2";
@@ -48,7 +50,7 @@ class MarkersWidget extends StatelessWidget {
   final String cuarentSiete = "Venustiano Carranza";
   final String cuarentNueve = "Unidad Administrativa";
 
-  const MarkersWidget(this.marcadorUno, {super.key});
+  const MarkersWidget(this.marcadorUno, {super.key, required this.context});
 
   Set<Marker> createMarkers() {
     Set<Marker> markers = {};
@@ -61,6 +63,55 @@ class MarkersWidget extends StatelessWidget {
         title: marcadorUno.Ida,
         snippet: marcadorUno.Ruta(xochi),
       ),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => Container(
+            height: 400,
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white
+                  .withOpacity(0.9), // Color blanco con transparencia
+              borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Información de combis de esta ruta",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  "Conductor: ",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                ),
+                Text(
+                  "Placas:",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                ),
+                Text(
+                  "Numero de la combi:",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
 
     Marker markerRX = Marker(
@@ -70,15 +121,17 @@ class MarkersWidget extends StatelessWidget {
         title: marcadorUno.Regreso,
         snippet: marcadorUno.Ruta(xochi),
       ),
+      onTap: () {},
     );
 
     /////// RUTA 2
     Marker markerILau = Marker(
-        markerId: const MarkerId('markerIDARUTA2'),
-        position: const LatLng(14.871950910080855, -92.25113979291167),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-        infoWindow:
-            InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(dos)));
+      markerId: const MarkerId('markerIDARUTA2'),
+      position: const LatLng(14.871950910080855, -92.25113979291167),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(dos)),
+    );
     Marker markerRLau = Marker(
         markerId: const MarkerId('markerRegresoRUTA2'),
         position: const LatLng(14.910895251721378, -92.26681775015547),
