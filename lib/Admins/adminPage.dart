@@ -81,7 +81,7 @@ class _AdminXochimilcoState extends State<AdminXochimilco> {
                 ),
               ),
               const SizedBox(
-                height: 20.0,
+                height: 15.0,
               ),
               TextFormField(
                 enableInteractiveSelection: false,

@@ -50,6 +50,7 @@ import 'package:rutapp/app/datos/ruta47.dart';
 import 'package:rutapp/app/datos/ruta47regreso.dart';
 import 'package:rutapp/app/datos/ruta49.dart';
 import 'package:rutapp/app/datos/ruta49regreso.dart';
+import 'package:rutapp/app/datos/rutaHuixtla.dart';
 import 'package:rutapp/generated/l10n.dart';
 
 class Combi {
@@ -102,6 +103,7 @@ const String cuarentCinco = "Emiliano Zapata";
 const String cuarentSeis = "Teofilio Acebo";
 const String cuarentSiete = "Venustiano Carranza";
 const String cuarentNueve = "Unidad Administrativa";
+const String Huixtla = "Huixtla";
 
 // Lista de combis
 final List<Combi> listaDeCombis = [
@@ -182,4 +184,6 @@ final List<Combi> listaDeCombis = [
   Combi(S().BaseI(xochi), polylineRegreXochi),
   Combi(S().BaseR(xochi), polylineIdaXochi), // Ruta 1
   Combi(S().Ruta(cuarentCuatro), polylineIDA44), //
+  Combi("RUTA HUIXTLA IDA", polylineIDAHuixtla),
+  Combi("RUTA HUIXTLA REGRESO", polylineREGHuixtla),
 ];

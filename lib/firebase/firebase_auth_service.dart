@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -27,5 +26,17 @@ class FirebaseAuthService {
       print("Some error occured");
     }
     return null;
+  }
+}
+
+FirebaseFirestore db = FirebaseFirestore.instance;
+
+Future<Map<String, dynamic>> getUserData(String userId) async {
+  DocumentSnapshot userData = await db.collection("users").doc(userId).get();
+
+  if (userData.exists) {
+    return userData.data() as Map<String, dynamic>;
+  } else {
+    return {}; // Devuelve un mapa vacío si el documento no existe
   }
 }

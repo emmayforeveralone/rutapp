@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rutapp/firebase/firebase_auth_service.dart';
 import 'package:rutapp/generated/l10n.dart';
 
 class MarkersWidget extends StatelessWidget {
@@ -49,6 +50,7 @@ class MarkersWidget extends StatelessWidget {
   final String cuarentSeis = "Teofilio Acebo";
   final String cuarentSiete = "Venustiano Carranza";
   final String cuarentNueve = "Unidad Administrativa";
+  final String Huixtla = "Huixtla";
 
   const MarkersWidget(this.marcadorUno, {super.key, required this.context});
 
@@ -66,49 +68,47 @@ class MarkersWidget extends StatelessWidget {
       onTap: () {
         showModalBottomSheet(
           context: context,
-          builder: (context) => Container(
-            height: 400,
-            padding: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.white
-                  .withOpacity(0.9), // Color blanco con transparencia
-              borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Información de combis de esta ruta",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "RMkMx13O3NV2JVKwMTsJw4ifbF43"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  "Conductor: ",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_xochi.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text("Placas: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "Conductor: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "Número de Combi: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
                   ),
-                ),
-                Text(
-                  "Placas:",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-                Text(
-                  "Numero de la combi:",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                  ),
-                ),
-              ],
-            ),
+                );
+              }
+            },
           ),
         );
       },
@@ -732,6 +732,23 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(cuarentNueve)));
 
+    // RUTA HUIXTLA
+    Marker markerHuixtlaIda = Marker(
+        markerId: const MarkerId("markerIdaHuixtla"),
+        position: const LatLng(0.0000, 0.0000),
+        infoWindow: InfoWindow(
+          title: marcadorUno.Ida,
+          snippet: marcadorUno.Ruta(Huixtla),
+        ));
+
+    Marker markerHuixtlaReg = Marker(
+        markerId: const MarkerId("markerRegHuixtla"),
+        position: const LatLng(0.0000, 0.0000),
+        infoWindow: InfoWindow(
+          title: marcadorUno.Regreso,
+          snippet: marcadorUno.Ruta(Huixtla),
+        ));
+
     markers.add(markerIX);
     markers.add(markerRX);
     //
@@ -864,6 +881,9 @@ class MarkersWidget extends StatelessWidget {
     markers.add(markerRUnidad);
     markers.add(markerIUnidadR);
     markers.add(markerRUnidadR);
+    //
+    markers.add(markerHuixtlaIda);
+    markers.add(markerHuixtlaReg);
 
     return markers;
   }
