@@ -6,12 +6,26 @@
     "BaseI": "Wout {ruta} Alé",
     "BaseR": "Wout {ruta} Tounen",
 
+    "ForaneaI": "Chimen Etranje {ruta} Ale",
+    "ForaneaR": "Chimen Etranje {ruta} Retounen",
+
     "BaseDer": "Wout {ruta} Dwa",
     "BaseIzq": "Wout {ruta} Goche",
 
     "Combi": "Chwazi yon Combi",
 
     "Mapa": "Kat 3D",
+    
+    "Admin":"Administratè",
+    "User":"Itilizatè",
+    "Pass":"Modpas",
+
+    "Ingresar":"Antre",
+    "Cliente":"Mwen se yon kliyan",
+
+    "Placas":"Plak",
+    "Conductor":"Kondiktè",
+    "NumCombi":"Nimewo Konbi",
 
     "language": "Lang",
     "systemLanguage": "Lang Sistèm"

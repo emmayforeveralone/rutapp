@@ -6,12 +6,26 @@
     "BaseI": "Route {ruta} Going",
     "BaseR": "Route {ruta} Return",
 
+    "ForaneaI": "Foreign Route {ruta} Going",
+    "ForaneaR": "Foreign Route {ruta} Return",
+
     "BaseDer": "Route {ruta} Right",
     "BaseIzq": "Route {ruta} Left",
 
     "Combi": "Select a Combi",
 
     "Mapa": "Map 3D",
+
+    "Admin":"Administrator",
+    "User":"User",
+    "Pass":"Passsword",
+
+    "Ingresar":"Login",
+    "Cliente":"I am a Client",
+
+    "Placas":"License Plates",
+    "Conductor":"Driver",
+    "NumCombi":"Combi Number",
 
     "language": "Language",
     "systemLanguage": "System Language"

@@ -3,6 +3,30 @@
     "Regreso": "Retounen baz",
     "Ruta": "Wout {ruta}",
 
+    "BaseI": "Wout {ruta} Ale",
+    "BaseR": "Wout {ruta} Tounen",
+
+    "ForaneaI": "Wout Ayisyen {ruta} Ale",
+    "ForaneaR": "Wout Ayisyen {ruta} Retounen",
+
+    "BaseDer": "Wout {ruta} Dwat",
+    "BaseIzq": "Wout {ruta} Goch",
+
+    "Combi": "Chwazi yon konbi",
+
+    "Mapa": "Kat 3D",
+
+    "Admin":"Administratè",
+    "User":"Itilizatè",
+    "Pass":"Modpas",
+
+    "Ingresar":"Antre",
+    "Cliente":"Mwen se yon kliyan",
+
+    "Placas":"Plak",
+    "Conductor":"Kondiktè",
+    "NumCombi":"Nimewo Konbi",
+
     "language": "Language",
     "systemLanguage": "System Language"
 }

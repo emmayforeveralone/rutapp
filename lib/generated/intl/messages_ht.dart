@@ -20,13 +20,41 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ht';
 
-  static String m4(ruta) => "Wout ${ruta}";
+  static String m0(ruta) => "Wout ${ruta} Dwat";
+
+  static String m1(ruta) => "Wout ${ruta} Ale";
+
+  static String m2(ruta) => "Wout ${ruta} Goch";
+
+  static String m3(ruta) => "Wout ${ruta} Tounen";
+
+  static String m4(ruta) => "Wout Ayisyen ${ruta} Ale";
+
+  static String m5(ruta) => "Wout Ayisyen ${ruta} Retounen";
+
+  static String m6(ruta) => "Wout ${ruta}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Admin": MessageLookupByLibrary.simpleMessage("Administratè"),
+        "BaseDer": m0,
+        "BaseI": m1,
+        "BaseIzq": m2,
+        "BaseR": m3,
+        "Cliente": MessageLookupByLibrary.simpleMessage("Mwen se yon kliyan"),
+        "Combi": MessageLookupByLibrary.simpleMessage("Chwazi yon konbi"),
+        "Conductor": MessageLookupByLibrary.simpleMessage("Kondiktè"),
+        "ForaneaI": m4,
+        "ForaneaR": m5,
         "Ida": MessageLookupByLibrary.simpleMessage("Sortant Baz"),
+        "Ingresar": MessageLookupByLibrary.simpleMessage("Antre"),
+        "Mapa": MessageLookupByLibrary.simpleMessage("Kat 3D"),
+        "NumCombi": MessageLookupByLibrary.simpleMessage("Nimewo Konbi"),
+        "Pass": MessageLookupByLibrary.simpleMessage("Modpas"),
+        "Placas": MessageLookupByLibrary.simpleMessage("Plak"),
         "Regreso": MessageLookupByLibrary.simpleMessage("Retounen baz"),
-        "Ruta": m4,
+        "Ruta": m6,
+        "User": MessageLookupByLibrary.simpleMessage("Itilizatè"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "systemLanguage":
             MessageLookupByLibrary.simpleMessage("System Language")
