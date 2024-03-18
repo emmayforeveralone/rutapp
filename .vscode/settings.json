@@ -1,4 +1,6 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive",
+    "editor.fontSize": 15,
+    "editor.fontFamily": "Cascadia code",
+    "java.configuration.updateBuildConfiguration": "automatic",
     "cmake.sourceDirectory": "C:/Users/galle/OneDrive/Documentos/universidad/4 cuatri/RUTAPP/rutapp/linux/flutter"
 }

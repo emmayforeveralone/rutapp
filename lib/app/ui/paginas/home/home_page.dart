@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
               zoomControlsEnabled: false,
               myLocationButtonEnabled: true,
               myLocationEnabled: true,
-              mapType: MapType.normal,
+              mapType: MapType.terrain,
               initialCameraPosition: _kGooglePlex,
               onMapCreated: (GoogleMapController controller) {
                 _controller.complete(controller);
@@ -145,7 +145,10 @@ class _HomePageState extends State<HomePage> {
                       .ruta,
               },
               markers: {
-                ...MarkersWidget(marcadorXochimilco).createMarkers(),
+                ...MarkersWidget(
+                  marcadorXochimilco,
+                  context: context,
+                ).createMarkers(),
                 // ...markerRuta2,
                 // ...markerRuta3,
                 // ...markerRuta31,

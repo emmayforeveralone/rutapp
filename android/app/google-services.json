@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "523797651840",
+    "project_id": "rutapp-e5632",
+    "storage_bucket": "rutapp-e5632.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523797651840:android:4d734276f8dd08101ca165",
+        "android_client_info": {
+          "package_name": "com.uptap.rutapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwkhLwzMCrpYlKLPy5_YgdfbX4E6ZGCqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
