@@ -1323,7 +1323,7 @@ class MarkersWidget extends StatelessWidget {
     // RUTA HUIXTLA
     Marker markerHuixtlaIda = Marker(
         markerId: const MarkerId("markerIdaHuixtla"),
-        position: const LatLng(0.0000, 0.0000),
+        position: const LatLng(15.140604622787576, -92.46536741179564),
         infoWindow: InfoWindow(
           title: marcadorUno.Ida,
           snippet: marcadorUno.Ruta(huixtlaK),
@@ -1331,12 +1331,11 @@ class MarkersWidget extends StatelessWidget {
 
     Marker markerHuixtlaReg = Marker(
         markerId: const MarkerId("markerRegHuixtla"),
-        position: const LatLng(0.0000, 0.0000),
+        position: const LatLng(14.91077176834897, -92.2614562274157),
         infoWindow: InfoWindow(
           title: marcadorUno.Regreso,
           snippet: marcadorUno.Ruta(huixtlaK),
         ));
-
     Marker markerPuertoIda = Marker(
       markerId: const MarkerId("markerIdaPuerto"),
       position: const LatLng(14.912818995797739, -92.26688616321292),
