@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rutapp/firebase/firebase_auth_service.dart';
@@ -50,7 +52,8 @@ class MarkersWidget extends StatelessWidget {
   final String cuarentSeis = "Teofilio Acebo";
   final String cuarentSiete = "Venustiano Carranza";
   final String cuarentNueve = "Unidad Administrativa";
-  final String Huixtla = "Huixtla";
+  final String huixtlaK = "Huixtla";
+  final String puerto = "Puerto Madero";
 
   const MarkersWidget(this.marcadorUno, {super.key, required this.context});
 
@@ -99,11 +102,12 @@ class MarkersWidget extends StatelessWidget {
                         height: 200, // Ajusta la altura según sea necesario
                       ),
                       const SizedBox(height: 10),
-                      Text("Placas: ${userData['placas'] ?? 'No disponible'}"),
                       Text(
-                          "Conductor: ${userData['conductor'] ?? 'No disponible'}"),
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
                       Text(
-                          "Número de Combi: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
                     ],
                   ),
                 );
@@ -141,25 +145,124 @@ class MarkersWidget extends StatelessWidget {
 
     //////////// RUTA 3
     Marker markerIFebrero = Marker(
-        markerId: const MarkerId('markerIdaRUTA3'),
-        position: const LatLng(14.950402428008362, -92.25401951577824),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(tres)));
+      markerId: const MarkerId('markerIdaRUTA3'),
+      position: const LatLng(14.950402428008362, -92.25401951577824),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(tres)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "rFZhwldYfUeMzfmEEfKE9tRhpoo2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_5febrero.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
 
     Marker markerRFebrero = Marker(
-        markerId: const MarkerId('markerRegresoRUTA3'),
-        position: const LatLng(14.911487636284026, -92.26444684386084),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(tres)));
+      markerId: const MarkerId('markerRegresoRUTA3'),
+      position: const LatLng(14.911487636284026, -92.26444684386084),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(tres)),
+    );
 
     ///////// RUTA 6
     Marker markerIBonanza = Marker(
-        markerId: const MarkerId('markerIdaRUTA6'),
-        position: const LatLng(14.900038387213106, -92.24218549585548),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(seis)));
+      markerId: const MarkerId('markerIdaRUTA6'),
+      position: const LatLng(14.900038387213106, -92.24218549585548),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(seis)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "7dQFLhdSd6SEODNGKja3gRaxkCh1"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_5febrero.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRBonanza = Marker(
         markerId: const MarkerId('markerRegresoRUTA5'),
         position: const LatLng(14.910304392332062, -92.25895969025628),
@@ -168,11 +271,60 @@ class MarkersWidget extends StatelessWidget {
 
     ///////// RUTA 7
     Marker markerIBonanza17 = Marker(
-        markerId: const MarkerId('markerIdaRUTA8'),
-        position: const LatLng(14.867818838864874, -92.27617462615618),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(ocho)));
+      markerId: const MarkerId('markerIdaRUTA8'),
+      position: const LatLng(14.867818838864874, -92.27617462615618),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(ocho)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "7JpHOwY53QNan8ctUmKdZkoOQD03"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_5febrero.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRBonanza17 = Marker(
         markerId: const MarkerId('markerRegresoRUTA8'),
         position: const LatLng(14.912447756692464, -92.2657426262038),
@@ -182,11 +334,60 @@ class MarkersWidget extends StatelessWidget {
 
     ///////// RUTA 9
     Marker markerIPalmeras = Marker(
-        markerId: const MarkerId('markerIdaRUTA9'),
-        position: const LatLng(14.907939959473968, -92.26580160803033),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(nueve)));
+      markerId: const MarkerId('markerIdaRUTA9'),
+      position: const LatLng(14.907939959473968, -92.26580160803033),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(nueve)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "Y3H0sEp3xpV73XfBipiifK7Ek5m2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_5febrero.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRPalmeras = Marker(
         markerId: const MarkerId('markerRegresoRUTA9'),
         position: const LatLng(14.856793835533134, -92.26662171361298),
@@ -196,23 +397,122 @@ class MarkersWidget extends StatelessWidget {
 
     //////// RUTA 11
     Marker markerIMontenegro = Marker(
-        markerId: const MarkerId('markerIdaRUTA11'),
-        position: const LatLng(14.91380504527542, -92.26477509310585),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(once)));
+      markerId: const MarkerId('markerIdaRUTA11'),
+      position: const LatLng(14.91380504527542, -92.26477509310585),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(once)),
+    );
     Marker markerRMontenegro = Marker(
-        markerId: const MarkerId('markerRegresoRUTA11'),
-        position: const LatLng(14.928546750549737, -92.24242373647574),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(once)));
+      markerId: const MarkerId('markerRegresoRUTA11'),
+      position: const LatLng(14.928546750549737, -92.24242373647574),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(once)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "0xWo5BP8K3gZm4zpb8JoPmzq8mj1"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_montenegro.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     //////// RUTA 12
     Marker markerIJoya = Marker(
-        markerId: const MarkerId('markerIdaRUTA12'),
-        position: const LatLng(14.87200744395737, -92.26052992873105),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(doce)));
+      markerId: const MarkerId('markerIdaRUTA12'),
+      position: const LatLng(14.87200744395737, -92.26052992873105),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(doce)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "J7FeZeWFo1OQ0ktgXP7btLUBnSC2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_montenegro.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRJoya = Marker(
         markerId: const MarkerId('markerRegresoRUTA3'),
         position: const LatLng(14.908411062159404, -92.25733174109645),
@@ -220,10 +520,59 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(doce)));
     /////// RUTA 13
     Marker markerIFramboyanes = Marker(
-        markerId: const MarkerId('markerIdaRUTA13'),
-        position: const LatLng(14.904918183876894, -92.27640348441359),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(trece)));
+      markerId: const MarkerId('markerIdaRUTA13'),
+      position: const LatLng(14.904918183876894, -92.27640348441359),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(trece)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "HSELnoU1rCasUq7Aet27oDgh8Jj1"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_framboyanes.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRFramboyanes = Marker(
         markerId: const MarkerId('markerRegresoRUTA3'),
         position: const LatLng(14.913706085744433, -92.26483031041772),
@@ -233,11 +582,60 @@ class MarkersWidget extends StatelessWidget {
 
     //////// RUTA 14
     Marker markerIVida = Marker(
-        markerId: const MarkerId('markerIdaRUTA14'),
-        position: const LatLng(14.868125026628082, -92.30974603465725),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(catorce)));
+      markerId: const MarkerId('markerIdaRUTA14'),
+      position: const LatLng(14.868125026628082, -92.30974603465725),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(catorce)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "ddSECHrD6xeJ7WLQlhQalTUG0zk2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_framboyanes.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRVida = Marker(
         markerId: const MarkerId('markerRegresoRUTA3'),
         position: const LatLng(14.915504419647878, -92.26361195680327),
@@ -247,50 +645,240 @@ class MarkersWidget extends StatelessWidget {
 
     ////// RUTA 15
     Marker markerIPerifericoIzq = Marker(
-        markerId: const MarkerId('markerIdaRUTA15'),
-        position: const LatLng(14.916379545992944, -92.26312256634874),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(quince)));
-    Marker markerRPerifericoIzq = Marker(
-        markerId: const MarkerId('markerRegresoRUTA15'),
-        position: const LatLng(14.916379743036957, -92.26311899998699),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(quince)));
+      markerId: const MarkerId('markerIdaRUTA15'),
+      position: const LatLng(14.903155, -92.268810),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(quince)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "UrdDRIIXCGMwoixZ6aDDNKB1HHn1"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_perifericoIzq.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
 
     ///// RUTA 16
     Marker markerIPerifericoDer = Marker(
-        markerId: const MarkerId('markerIdaRUTA16'),
-        position: const LatLng(14.950402428008362, -92.25401951577824),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(dieciseis)));
+      markerId: const MarkerId('markerIdaRUTA16'),
+      position: const LatLng(14.903293, -92.268994),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(dieciseis)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "izVBej0MjGetNoW4UJxASxpZQie2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_perifericoIzq.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
 
-    Marker markerRPerifericoDer = Marker(
-        markerId: const MarkerId('markerRegresoRUTA16'),
-        position: const LatLng(14.911487636284026, -92.26444684386084),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(dieciseis)));
-
-    ///// RUTA 17
+    ///// RUTA 17  14.868447, -92.286129
     Marker markerIEmiliano = Marker(
         markerId: const MarkerId('markerIdaRUTA17'),
         position: const LatLng(14.885061455356162, -92.2719627500856),
         infoWindow: InfoWindow(
             title: marcadorUno.Ida, snippet: marcadorUno.Ruta(diecisiete)));
     Marker markerREmiliano = Marker(
-        markerId: const MarkerId('markerRegresoRUTA17'),
-        position: const LatLng(14.909199186281478, -92.26661278135965),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(diecisiete)));
+      markerId: const MarkerId('markerRegresoRUTA17'),
+      position: const LatLng(14.909199186281478, -92.26661278135965),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(diecisiete)),
+    );
+
+    Marker markerIEmilianoBase = Marker(
+      markerId: const MarkerId('markerIdaRUTA17'),
+      position: const LatLng(14.868447, -92.286129),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(diecisiete)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "QIBf0aaSTAVMKniy8ZiyCMZfMqk2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_emilianoZapata.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
 
     ///// RUTA 18
     Marker markerIPalacios = Marker(
-        markerId: const MarkerId('markerIdaRUTA17'),
-        position: const LatLng(14.856612107834472, -92.25844520109351),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(dieciocho)));
+      markerId: const MarkerId('markerIdaRUTA17'),
+      position: const LatLng(14.856612107834472, -92.25844520109351),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(dieciocho)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_palacios.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRPalacios = Marker(
         markerId: const MarkerId('markerRegresoRUTA18'),
         position: const LatLng(14.912688087637367, -92.26439853103358),
@@ -738,7 +1326,7 @@ class MarkersWidget extends StatelessWidget {
         position: const LatLng(15.140604622787576, -92.46536741179564),
         infoWindow: InfoWindow(
           title: marcadorUno.Ida,
-          snippet: marcadorUno.Ruta(Huixtla),
+          snippet: marcadorUno.Ruta(huixtlaK),
         ));
 
     Marker markerHuixtlaReg = Marker(
@@ -746,7 +1334,21 @@ class MarkersWidget extends StatelessWidget {
         position: const LatLng(14.91077176834897, -92.2614562274157),
         infoWindow: InfoWindow(
           title: marcadorUno.Regreso,
-          snippet: marcadorUno.Ruta(Huixtla),
+          snippet: marcadorUno.Ruta(huixtlaK),
+        ));
+    Marker markerPuertoIda = Marker(
+      markerId: const MarkerId("markerIdaPuerto"),
+      position: const LatLng(14.912818995797739, -92.26688616321292),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(puerto)),
+    );
+
+    Marker markerPuertoReg = Marker(
+        markerId: const MarkerId("markerRegPuerto"),
+        position: const LatLng(14.718383463726774, -92.42254932486284),
+        infoWindow: InfoWindow(
+          title: marcadorUno.Regreso,
+          snippet: marcadorUno.Ruta(puerto),
         ));
 
     markers.add(markerIX);
@@ -780,13 +1382,12 @@ class MarkersWidget extends StatelessWidget {
     markers.add(markerRVida);
     //
     markers.add(markerIPerifericoIzq);
-    markers.add(markerRPerifericoIzq);
     //
     markers.add(markerIPerifericoDer);
-    markers.add(markerRPerifericoDer);
     //
     markers.add(markerIEmiliano);
     markers.add(markerREmiliano);
+    markers.add(markerIEmilianoBase);
     //
     markers.add(markerIPalacios);
     markers.add(markerRPalacios);
@@ -884,6 +1485,9 @@ class MarkersWidget extends StatelessWidget {
     //
     markers.add(markerHuixtlaIda);
     markers.add(markerHuixtlaReg);
+    //
+    markers.add(markerPuertoIda);
+    markers.add(markerPuertoReg);
 
     return markers;
   }

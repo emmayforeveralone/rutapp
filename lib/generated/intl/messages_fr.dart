@@ -28,19 +28,33 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(ruta) => "Itinéraire ${ruta} Retourner ";
 
-  static String m4(ruta) => "Itinéraire ${ruta}";
+  static String m4(ruta) => "Chemin Étranger vers ${ruta} Aller";
+
+  static String m5(ruta) => "Chemin Étranger vers ${ruta} Retour";
+
+  static String m6(ruta) => "Itinéraire ${ruta}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Admin": MessageLookupByLibrary.simpleMessage("Administrateur"),
         "BaseDer": m0,
         "BaseI": m1,
         "BaseIzq": m2,
         "BaseR": m3,
+        "Cliente": MessageLookupByLibrary.simpleMessage("Je suis un client"),
         "Combi": MessageLookupByLibrary.simpleMessage("Sélectionnez un Combi"),
+        "Conductor": MessageLookupByLibrary.simpleMessage("Conducteur"),
+        "ForaneaI": m4,
+        "ForaneaR": m5,
         "Ida": MessageLookupByLibrary.simpleMessage("Base de départ"),
+        "Ingresar": MessageLookupByLibrary.simpleMessage("Connexion"),
         "Mapa": MessageLookupByLibrary.simpleMessage("Carte 3D"),
+        "NumCombi": MessageLookupByLibrary.simpleMessage("Numéro de Combi"),
+        "Pass": MessageLookupByLibrary.simpleMessage("Mot de passe"),
+        "Placas": MessageLookupByLibrary.simpleMessage("Plaques"),
         "Regreso": MessageLookupByLibrary.simpleMessage("Base de retour"),
-        "Ruta": m4,
+        "Ruta": m6,
+        "User": MessageLookupByLibrary.simpleMessage("Utilisateur"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "systemLanguage":
             MessageLookupByLibrary.simpleMessage("System Language")

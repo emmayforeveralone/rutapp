@@ -6,6 +6,9 @@
     "BaseI": "Ruta {ruta} Ida",
     "BaseR": "Ruta {ruta} Regreso",
 
+    "ForaneaI": "Ruta Foránea {ruta} Ida",
+    "ForaneaR": "Ruta Foránea {ruta} Regreso",
+
     "BaseDer": "Ruta {ruta} Derecha",
     "BaseIzq": "Ruta {ruta} Izquiera",
 
@@ -13,6 +16,18 @@
 
     "Mapa": "Mapa 3D",
 
+    "Admin":"Administrador",
+    "User":"Usuario",
+    "Pass":"Contraseña",
+
+    "Ingresar":"Ingresar",
+    "Cliente":"Soy Cliente",
+
+    "Placas":"Placas",
+    "Conductor":"Conductor",
+    "NumCombi":"Numero de Combi",
+
     "language": "Idioma",
     "systemLanguage": "Idioma del Sistema"
 }
+

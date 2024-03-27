@@ -100,6 +100,26 @@ class S {
     );
   }
 
+  /// `Ruta Foránea {ruta} Ida`
+  String ForaneaI(Object ruta) {
+    return Intl.message(
+      'Ruta Foránea $ruta Ida',
+      name: 'ForaneaI',
+      desc: '',
+      args: [ruta],
+    );
+  }
+
+  /// `Ruta Foránea {ruta} Regreso`
+  String ForaneaR(Object ruta) {
+    return Intl.message(
+      'Ruta Foránea $ruta Regreso',
+      name: 'ForaneaR',
+      desc: '',
+      args: [ruta],
+    );
+  }
+
   /// `Ruta {ruta} Derecha`
   String BaseDer(Object ruta) {
     return Intl.message(
@@ -135,6 +155,86 @@ class S {
     return Intl.message(
       'Mapa 3D',
       name: 'Mapa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Administrador`
+  String get Admin {
+    return Intl.message(
+      'Administrador',
+      name: 'Admin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Usuario`
+  String get User {
+    return Intl.message(
+      'Usuario',
+      name: 'User',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contraseña`
+  String get Pass {
+    return Intl.message(
+      'Contraseña',
+      name: 'Pass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ingresar`
+  String get Ingresar {
+    return Intl.message(
+      'Ingresar',
+      name: 'Ingresar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Soy Cliente`
+  String get Cliente {
+    return Intl.message(
+      'Soy Cliente',
+      name: 'Cliente',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Placas`
+  String get Placas {
+    return Intl.message(
+      'Placas',
+      name: 'Placas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conductor`
+  String get Conductor {
+    return Intl.message(
+      'Conductor',
+      name: 'Conductor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Numero de Combi`
+  String get NumCombi {
+    return Intl.message(
+      'Numero de Combi',
+      name: 'NumCombi',
       desc: '',
       args: [],
     );

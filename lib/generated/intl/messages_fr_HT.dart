@@ -28,19 +28,33 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(ruta) => "Wout ${ruta} Tounen";
 
-  static String m4(ruta) => "Wout ${ruta}";
+  static String m4(ruta) => "Chimen Etranje ${ruta} Ale";
+
+  static String m5(ruta) => "Chimen Etranje ${ruta} Retounen";
+
+  static String m6(ruta) => "Wout ${ruta}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Admin": MessageLookupByLibrary.simpleMessage("Administratè"),
         "BaseDer": m0,
         "BaseI": m1,
         "BaseIzq": m2,
         "BaseR": m3,
+        "Cliente": MessageLookupByLibrary.simpleMessage("Mwen se yon kliyan"),
         "Combi": MessageLookupByLibrary.simpleMessage("Chwazi yon Combi"),
+        "Conductor": MessageLookupByLibrary.simpleMessage("Kondiktè"),
+        "ForaneaI": m4,
+        "ForaneaR": m5,
         "Ida": MessageLookupByLibrary.simpleMessage("Baz Alé"),
+        "Ingresar": MessageLookupByLibrary.simpleMessage("Antre"),
         "Mapa": MessageLookupByLibrary.simpleMessage("Kat 3D"),
+        "NumCombi": MessageLookupByLibrary.simpleMessage("Nimewo Konbi"),
+        "Pass": MessageLookupByLibrary.simpleMessage("Modpas"),
+        "Placas": MessageLookupByLibrary.simpleMessage("Plak"),
         "Regreso": MessageLookupByLibrary.simpleMessage("Baz Tounen"),
-        "Ruta": m4,
+        "Ruta": m6,
+        "User": MessageLookupByLibrary.simpleMessage("Itilizatè"),
         "language": MessageLookupByLibrary.simpleMessage("Lang"),
         "systemLanguage": MessageLookupByLibrary.simpleMessage("Lang Sistèm")
       };
