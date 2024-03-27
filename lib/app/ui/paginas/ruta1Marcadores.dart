@@ -52,8 +52,12 @@ class MarkersWidget extends StatelessWidget {
   final String cuarentSeis = "Teofilio Acebo";
   final String cuarentSiete = "Venustiano Carranza";
   final String cuarentNueve = "Unidad Administrativa";
+  //FORANEAS
   final String huixtlaK = "Huixtla";
   final String puerto = "Puerto Madero";
+  final String cacahoatan = "Cacahoatan";
+  final String talisman = "Talisman";
+  final String tucChico = "Tuxtla Chico";
 
   const MarkersWidget(this.marcadorUno, {super.key, required this.context});
 
@@ -887,11 +891,60 @@ class MarkersWidget extends StatelessWidget {
 
     ///// RUTA 19
     Marker markerISeminarista = Marker(
-        markerId: const MarkerId('markerIdaRUTA19'),
-        position: const LatLng(14.878587638044804, -92.24618925118713),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(diecinueve)));
+      markerId: const MarkerId('markerIdaRUTA19'),
+      position: const LatLng(14.878587638044804, -92.24618925118713),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(diecinueve)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "JwzhRBQGeqafQxfoxBafm7L71DR2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_seminarista.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerRSeminarista = Marker(
         markerId: const MarkerId('markerRegresoRUTA19'),
         position: const LatLng(14.910961048888597, -92.26551303684381),
@@ -901,10 +954,59 @@ class MarkersWidget extends StatelessWidget {
 
     ///// RUTA 20
     Marker markerIEnero = Marker(
-        markerId: const MarkerId('markerIdaRUTA20'),
-        position: const LatLng(14.878079253627012, -92.25557407942205),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veinte)));
+      markerId: const MarkerId('markerIdaRUTA20'),
+      position: const LatLng(14.878079253627012, -92.25557407942205),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veinte)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "xFmwqMKWMYZ9IGs5HAqeisAZu0P2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_6_enero.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
     Marker markerREnero = Marker(
         markerId: const MarkerId('markerRegresoRUTA20'),
         position: const LatLng(14.911771944646082, -92.26621528208234),
@@ -1351,6 +1453,45 @@ class MarkersWidget extends StatelessWidget {
           snippet: marcadorUno.Ruta(puerto),
         ));
 
+    // RUTA CACAHOATAN
+    Marker markerIdaCacahoatan = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.913337545057166, -92.2672640228076),
+        infoWindow: InfoWindow(
+            title: "Base de Ida", snippet: "Ruta Foranea Cacahoatan"));
+
+    Marker markerRegresoCacahoatan = Marker(
+        markerId: const MarkerId('marker'),
+        position: const LatLng(14.996250841199759, -92.1644619788005),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(cacahoatan)));
+
+    // RUTA TALISMAN
+    Marker markerIdaTalisman = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.913337545057166, -92.2672640228076),
+        infoWindow:
+            InfoWindow(title: "Base de Ida", snippet: "RUTA Foranea Talisman"));
+
+    Marker markerRegreTalisman = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.963313020499001, -92.147759179376),
+        infoWindow: InfoWindow(
+            title: "Base de Regreso", snippet: "RUTA Foranea Talisman"));
+
+    // RUTA TUX CHICO
+    Marker markerIdaTux = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.913337545057166, -92.2672640228076),
+        infoWindow: InfoWindow(
+            title: "Base de Ida", snippet: "RUTA Foranea Tuxtla Chico"));
+
+    Marker markerRegresoTux = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.939347714806548, -92.168323808123),
+        infoWindow: InfoWindow(
+            title: "Base de Regreso", snippet: "RUTA Foranea Tuxtla Chico"));
+
     markers.add(markerIX);
     markers.add(markerRX);
     //
@@ -1488,6 +1629,15 @@ class MarkersWidget extends StatelessWidget {
     //
     markers.add(markerPuertoIda);
     markers.add(markerPuertoReg);
+    //
+    markers.add(markerIdaCacahoatan);
+    markers.add(markerRegresoCacahoatan);
+    //
+    markers.add(markerIdaTalisman);
+    markers.add(markerRegreTalisman);
+    //
+    markers.add(markerIdaTux);
+    markers.add(markerRegresoTux);
 
     return markers;
   }

@@ -28,11 +28,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(ruta) => "Wout ${ruta} Tounen";
 
-  static String m4(ruta) => "Wout Ayisyen ${ruta} Ale";
+  static String m5(ruta) => "Wout Ayisyen ${ruta} Ale";
 
-  static String m5(ruta) => "Wout Ayisyen ${ruta} Retounen";
+  static String m6(ruta) => "Wout Ayisyen ${ruta} Retounen";
 
-  static String m6(ruta) => "Wout ${ruta}";
+  static String m7(ruta) => "Wout ${ruta}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -44,8 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Cliente": MessageLookupByLibrary.simpleMessage("Mwen se yon kliyan"),
         "Combi": MessageLookupByLibrary.simpleMessage("Chwazi yon konbi"),
         "Conductor": MessageLookupByLibrary.simpleMessage("Kondiktè"),
-        "ForaneaI": m4,
-        "ForaneaR": m5,
+        "ForaneaI": m5,
+        "ForaneaR": m6,
         "Ida": MessageLookupByLibrary.simpleMessage("Sortant Baz"),
         "Ingresar": MessageLookupByLibrary.simpleMessage("Antre"),
         "Mapa": MessageLookupByLibrary.simpleMessage("Kat 3D"),
@@ -53,7 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Pass": MessageLookupByLibrary.simpleMessage("Modpas"),
         "Placas": MessageLookupByLibrary.simpleMessage("Plak"),
         "Regreso": MessageLookupByLibrary.simpleMessage("Retounen baz"),
-        "Ruta": m6,
+        "Ruta": m7,
         "User": MessageLookupByLibrary.simpleMessage("Itilizatè"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "systemLanguage":

@@ -32,11 +32,17 @@ class FirebaseAuthService {
 FirebaseFirestore db = FirebaseFirestore.instance;
 
 Future<Map<String, dynamic>> getUserData(String userId) async {
-  DocumentSnapshot userData = await db.collection("users").doc(userId).get();
+  try {
+    DocumentSnapshot userData = await db.collection("users").doc(userId).get();
 
-  if (userData.exists) {
-    return userData.data() as Map<String, dynamic>;
-  } else {
-    return {}; // Devuelve un mapa vacío si el documento no existe
+    if (userData.exists) {
+      return userData.data() as Map<String, dynamic>;
+    } else {
+      return {}; // Devuelve un mapa vacío si el documento no existe
+    }
+  } catch (e) {
+    // Manejar la excepción aquí, por ejemplo, mostrar un mensaje de error al usuario
+    print("Error al obtener los datos del usuario: $e");
+    return {}; // Devuelve un mapa vacío en caso de error
   }
 }

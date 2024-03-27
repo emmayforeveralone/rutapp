@@ -50,8 +50,11 @@ import 'package:rutapp/app/datos/ruta47.dart';
 import 'package:rutapp/app/datos/ruta47regreso.dart';
 import 'package:rutapp/app/datos/ruta49.dart';
 import 'package:rutapp/app/datos/ruta49regreso.dart';
+import 'package:rutapp/app/datos/rutaCacahoatan.dart';
 import 'package:rutapp/app/datos/rutaHuixtla.dart';
 import 'package:rutapp/app/datos/rutaPuerto.dart';
+import 'package:rutapp/app/datos/rutaTalisman.dart';
+import 'package:rutapp/app/datos/rutaTuxChico.dart';
 import 'package:rutapp/generated/l10n.dart';
 
 class Combi {
@@ -104,8 +107,11 @@ const String cuarentCinco = "Emiliano Zapata";
 const String cuarentSeis = "Teofilio Acebo";
 const String cuarentSiete = "Venustiano Carranza";
 const String cuarentNueve = "Unidad Administrativa";
-const String Huixtla = "Huixtla";
+const String huixtla = "Huixtla";
 const String puerto = "Puerto Madero";
+const String cacahoatan = "Cacahoatan";
+const String talisman = "Talisman";
+const String tuxChico = "Tuxtla Chico";
 
 // Lista de combis
 final List<Combi> listaDeCombis = [
@@ -186,8 +192,11 @@ final List<Combi> listaDeCombis = [
   Combi(S().BaseI(xochi), polylineRegreXochi),
   Combi(S().BaseR(xochi), polylineIdaXochi), // Ruta 1
   Combi(S().Ruta(cuarentCuatro), polylineIDA44), //
-  Combi(S().ForaneaI(Huixtla), polylineIDAHuixtla),
-  Combi(S().ForaneaR(Huixtla), polylineREGHuixtla),
+  Combi(S().ForaneaI(huixtla), polylineIDAHuixtla),
+  Combi(S().ForaneaR(huixtla), polylineREGHuixtla),
   Combi(S().ForaneaI(puerto), polylineIDAPUERTO),
   Combi(S().ForaneaR(puerto), polylineREGPUERTO),
+  Combi(S().Foranea(cacahoatan), polylineIdaCacahoatan),
+  Combi(S().Foranea(talisman), polylineIdaTalisman),
+  Combi(S().Foranea(tuxChico), polylineIdaTuxtlaChico)
 ];

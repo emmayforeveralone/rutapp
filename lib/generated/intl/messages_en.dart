@@ -28,11 +28,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(ruta) => "Route ${ruta} Return";
 
-  static String m4(ruta) => "Foreign Route ${ruta} Going";
+  static String m4(ruta) => "Foreign Route ${ruta}";
 
-  static String m5(ruta) => "Foreign Route ${ruta} Return";
+  static String m5(ruta) => "Foreign Route ${ruta} Going";
 
-  static String m6(ruta) => "Route ${ruta}";
+  static String m6(ruta) => "Foreign Route ${ruta} Return";
+
+  static String m7(ruta) => "Route ${ruta}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -44,8 +46,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Cliente": MessageLookupByLibrary.simpleMessage("I am a Client"),
         "Combi": MessageLookupByLibrary.simpleMessage("Select a Combi"),
         "Conductor": MessageLookupByLibrary.simpleMessage("Driver"),
-        "ForaneaI": m4,
-        "ForaneaR": m5,
+        "Foranea": m4,
+        "ForaneaI": m5,
+        "ForaneaR": m6,
         "Ida": MessageLookupByLibrary.simpleMessage("One-Way Basis"),
         "Ingresar": MessageLookupByLibrary.simpleMessage("Login"),
         "Mapa": MessageLookupByLibrary.simpleMessage("Map 3D"),
@@ -53,7 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Pass": MessageLookupByLibrary.simpleMessage("Passsword"),
         "Placas": MessageLookupByLibrary.simpleMessage("License Plates"),
         "Regreso": MessageLookupByLibrary.simpleMessage("Return Basis"),
-        "Ruta": m6,
+        "Ruta": m7,
         "User": MessageLookupByLibrary.simpleMessage("User"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "systemLanguage":
