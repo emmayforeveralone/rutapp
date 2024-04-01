@@ -28,6 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(ruta) => "Wout ${ruta} Tounen";
 
+  static String m4(ruta) => "Chimen Etranje ${ruta}";
+
   static String m5(ruta) => "Chimen Etranje ${ruta} Ale";
 
   static String m6(ruta) => "Chimen Etranje ${ruta} Retounen";
@@ -44,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Cliente": MessageLookupByLibrary.simpleMessage("Mwen se yon kliyan"),
         "Combi": MessageLookupByLibrary.simpleMessage("Chwazi yon Combi"),
         "Conductor": MessageLookupByLibrary.simpleMessage("Kondiktè"),
+        "Foranea": m4,
         "ForaneaI": m5,
         "ForaneaR": m6,
         "Ida": MessageLookupByLibrary.simpleMessage("Baz Alé"),

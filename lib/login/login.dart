@@ -93,6 +93,8 @@ class _LoginState extends State<Login> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0))),
                   controller: _passwordController,
+                  maxLength: 6,
+                  obscureText: true,
                   validator: (value) {
                     if (value!.isEmpty) {
                       return "Contraseña incorrecta";

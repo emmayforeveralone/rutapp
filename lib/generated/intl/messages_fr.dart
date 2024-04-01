@@ -28,6 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(ruta) => "Itinéraire ${ruta} Retourner ";
 
+  static String m4(ruta) => "Route étrangère ${ruta}";
+
   static String m5(ruta) => "Chemin Étranger vers ${ruta} Aller";
 
   static String m6(ruta) => "Chemin Étranger vers ${ruta} Retour";
@@ -44,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Cliente": MessageLookupByLibrary.simpleMessage("Je suis un client"),
         "Combi": MessageLookupByLibrary.simpleMessage("Sélectionnez un Combi"),
         "Conductor": MessageLookupByLibrary.simpleMessage("Conducteur"),
+        "Foranea": m4,
         "ForaneaI": m5,
         "ForaneaR": m6,
         "Ida": MessageLookupByLibrary.simpleMessage("Base de départ"),
