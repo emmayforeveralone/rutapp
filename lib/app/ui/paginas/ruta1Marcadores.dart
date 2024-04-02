@@ -1136,24 +1136,14 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRColinas = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA22'),
         position: const LatLng(14.912431200770666, -92.26455513546168),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintidos)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA22'),
-      position: const LatLng(14.912431200770666, -92.26455513546168),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintidos)),
-    );
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     ///// RUTA 23 ID OWPm4BrvnzdDM5GprI3FxEdKXzF2
     Marker markerIEstacionG = Marker(
-<<<<<<< HEAD
       markerId: const MarkerId('markerIdaRUTA23'),
       position: const LatLng(14.876678878740666, -92.2997825582719),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
@@ -1208,13 +1198,7 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
-=======
-        markerId: const MarkerId('markerIdaRUTA23'),
-        position: const LatLng(14.876678878740666, -92.2997825582719),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veintitres)));
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerREstacionG = Marker(
         markerId: const MarkerId('markerRegresoRUTA23'),
         position: const LatLng(14.912704080556866, -92.2677333594763),
@@ -1222,12 +1206,9 @@ class MarkersWidget extends StatelessWidget {
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintitres)));
 
-<<<<<<< HEAD
     //// RUTa 24
-=======
     //// RUTa 24  ID 6AA9x4iceVMoPvCsduOtMqGWki83
 
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
     Marker markerIVergel = Marker(
       markerId: const MarkerId('markerIdaRUTA24'),
       position: const LatLng(14.926859866457542, -92.26991807774965),
@@ -1284,7 +1265,6 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRVergel = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA24'),
         position: const LatLng(14.91565480614814, -92.26524535356685),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
@@ -1292,25 +1272,11 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(veinticuatro)));
 
-    ///// RUTA 25
-    Marker markerILibertad = Marker(
-      markerId: const MarkerId('markerIdaRUTA25'),
-      position: const LatLng(14.911497383602342, -92.26578511608048),
-      infoWindow: InfoWindow(
-=======
-      markerId: const MarkerId('markerRegresoRUTA24'),
-      position: const LatLng(14.91565480614814, -92.26524535356685),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veinticuatro)),
-    );
-
     ///// RUTA 25 ID
     Marker markerILibertad = Marker(
       markerId: const MarkerId('markerIdaRUTA25'),
       position: const LatLng(14.911497383602342, -92.26578511608048),
       infoWindow: InfoWindow(
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
           title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veinticinco)),
       onTap: () {
         showModalBottomSheet(
@@ -1361,22 +1327,15 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
+
     Marker markerRLibertad = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA3'),
         position: const LatLng(14.891930739344135, -92.29756901704991),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(veinticinco)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA3'),
-      position: const LatLng(14.891930739344135, -92.29756901704991),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veinticinco)),
-    );
 
     ///// RUTA 26 ID
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerRSolidaridad = Marker(
       markerId: const MarkerId('markerRegresoRUTA26'),
@@ -1434,22 +1393,13 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerISoliradidad = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerIdaRUTA26'),
         position: const LatLng(14.911487636284026, -92.26444684386084),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
         infoWindow: InfoWindow(
             title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veintiseis)));
-=======
-      markerId: const MarkerId('markerIdaRUTA26'),
-      position: const LatLng(14.911487636284026, -92.26444684386084),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veintiseis)),
-    );
 
     ///// RUTA 27 ID
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerICafetales = Marker(
       markerId: const MarkerId('markerIdaRUTA27'),
@@ -1507,23 +1457,12 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRCafetales = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA3'),
         position: const LatLng(14.910933980692793, -92.26350430388831),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(veintisiete)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA3'),
-      position: const LatLng(14.910933980692793, -92.26350430388831),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintisiete)),
-    );
-
-    ///// RUTA 28 ID
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerIVegasIzq = Marker(
       markerId: const MarkerId('markerIdaRUTA28'),
@@ -1581,20 +1520,11 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRVegasIzq = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA28'),
         position: const LatLng(14.912552693521517, -92.26503143785993),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintiocho)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA28'),
-      position: const LatLng(14.912552693521517, -92.26503143785993),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintiocho)),
-    );
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     ///// RUTA 29 ID
     Marker markerIVegasDer = Marker(
@@ -1652,21 +1582,11 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRVegasDer = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA29'),
         position: const LatLng(14.91254709782167, -92.26503078444301),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(veintinueve)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA29'),
-      position: const LatLng(14.91254709782167, -92.26503078444301),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintinueve)),
-    );
-
-    ///// RUTA 30 ID
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerIPorvenir = Marker(
       markerId: const MarkerId('markerIdaRUTA30'),
@@ -1724,25 +1644,13 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRPorvenir = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA30'),
         position: const LatLng(14.915740303111379, -92.26524009184264),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treinta)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA30'),
-      position: const LatLng(14.915740303111379, -92.26524009184264),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treinta)),
-    );
-
-    ///// RUTA 31 ID VxrAnKorIfVqKlKeTBFvajjvmGQ2
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerIFrancisco = Marker(
-<<<<<<< HEAD
       markerId: const MarkerId('markerIdaRUTA31'),
       position: const LatLng(14.912543675730971, -92.26449286313206),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRose),
@@ -1797,13 +1705,6 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
-=======
-        markerId: const MarkerId('markerIdaRUTA31'),
-        position: const LatLng(14.912543675730971, -92.26449286313206),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRose),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintauno)));
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
     Marker markerRFrancisco = Marker(
         markerId: const MarkerId('markerRegresoRUTA5'),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRose),
@@ -1867,20 +1768,11 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerROctubre = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA32'),
         position: const LatLng(14.915222074962239, -92.26495638271793),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintados)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA32'),
-      position: const LatLng(14.915222074962239, -92.26495638271793),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintados)),
-    );
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     ////// RUTA 33 ID
     Marker markerITeofilo = Marker(
@@ -1939,23 +1831,12 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRTeofilio = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA33'),
         position: const LatLng(14.91094473195664, -92.26350558126313),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(treintatres)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA33'),
-      position: const LatLng(14.91094473195664, -92.26350558126313),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintatres)),
-    );
-
-    ///// RUTA 34  ID
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerIConfeti = Marker(
       markerId: const MarkerId('markerIdaRUTA34'),
@@ -2013,23 +1894,12 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRConfeti = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA34'),
         position: const LatLng(14.915726622268053, -92.26523239829439),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(treintacuatro)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA34'),
-      position: const LatLng(14.915726622268053, -92.26523239829439),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintacuatro)),
-    );
-
-    ////// RUTA 35 ID
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerIFebreroSan = Marker(
       markerId: const MarkerId('markerIdaRUTA35'),
@@ -2216,23 +2086,12 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRBonanzaCen = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA38'),
         position: const LatLng(14.912582936783396, -92.26565057225893),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(treintaocho)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA38'),
-      position: const LatLng(14.912582936783396, -92.26565057225893),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintaocho)),
-    );
-
-    ////// RUTA 39 ID
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     Marker markerILomaLinda = Marker(
       markerId: const MarkerId('markerIdaRUTA39'),
@@ -2354,20 +2213,11 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRMilenio = Marker(
-<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA41R'),
         position: const LatLng(14.905065444604146, -92.26935903480027),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
         infoWindow: InfoWindow(
             title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentaUno)));
-=======
-      markerId: const MarkerId('markerRegresoRUTA41R'),
-      position: const LatLng(14.905065444604146, -92.26935903480027),
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentaUno)),
-    );
->>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     //HAZTA AQUI
 
