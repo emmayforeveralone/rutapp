@@ -6,6 +6,8 @@
     "BaseI": "Route {ruta} Going",
     "BaseR": "Route {ruta} Return",
 
+    "Foranea": "Foreign Route {ruta}",
+
     "ForaneaI": "Foreign Route {ruta} Going",
     "ForaneaR": "Foreign Route {ruta} Return",
 

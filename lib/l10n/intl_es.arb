@@ -6,6 +6,8 @@
     "BaseI": "Ruta {ruta} Ida",
     "BaseR": "Ruta {ruta} Regreso",
 
+    "Foranea": "Ruta Foránea {ruta}",
+
     "ForaneaI": "Ruta Foránea {ruta} Ida",
     "ForaneaR": "Ruta Foránea {ruta} Regreso",
 

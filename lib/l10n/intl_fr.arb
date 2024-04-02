@@ -6,6 +6,8 @@
     "BaseI": "Itinéraire {ruta} Aller à",
     "BaseR": "Itinéraire {ruta} Retourner ",
 
+    "Foranea": "Route étrangère {ruta}",
+
     "ForaneaI": "Chemin Étranger vers {ruta} Aller",
     "ForaneaR": "Chemin Étranger vers {ruta} Retour",
 

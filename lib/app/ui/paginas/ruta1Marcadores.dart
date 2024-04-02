@@ -52,8 +52,12 @@ class MarkersWidget extends StatelessWidget {
   final String cuarentSeis = "Teofilio Acebo";
   final String cuarentSiete = "Venustiano Carranza";
   final String cuarentNueve = "Unidad Administrativa";
+  //FORANEAS
   final String huixtlaK = "Huixtla";
   final String puerto = "Puerto Madero";
+  final String cacahoatan = "Cacahoatan";
+  final String talisman = "Talisman";
+  final String tucChico = "Tuxtla Chico";
 
   const MarkersWidget(this.marcadorUno, {super.key, required this.context});
 
@@ -101,6 +105,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("8 am - 10 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -887,35 +893,17 @@ class MarkersWidget extends StatelessWidget {
 
     ///// RUTA 19
     Marker markerISeminarista = Marker(
-        markerId: const MarkerId('markerIdaRUTA19'),
-        position: const LatLng(14.878587638044804, -92.24618925118713),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(diecinueve)));
-    Marker markerRSeminarista = Marker(
-        markerId: const MarkerId('markerRegresoRUTA19'),
-        position: const LatLng(14.910961048888597, -92.26551303684381),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(diecinueve)));
-
-    ///// RUTA 20
-    Marker markerIEnero = Marker(
-        markerId: const MarkerId('markerIdaRUTA20'),
-        position: const LatLng(14.878079253627012, -92.25557407942205),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veinte)));
-    Marker markerREnero = Marker(
-      markerId: const MarkerId('markerRegresoRUTA20'),
-      position: const LatLng(14.911771944646082, -92.26621528208234),
+      markerId: const MarkerId('markerIdaRUTA19'),
+      position: const LatLng(14.878587638044804, -92.24618925118713),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
       infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veinte)),
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(diecinueve)),
       onTap: () {
         showModalBottomSheet(
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "JwzhRBQGeqafQxfoxBafm7L71DR2"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -939,7 +927,7 @@ class MarkersWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(
-                        'assets/base_palacios.png',
+                        'assets/base_seminarista.png',
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
@@ -959,8 +947,75 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
+    Marker markerRSeminarista = Marker(
+        markerId: const MarkerId('markerRegresoRUTA19'),
+        position: const LatLng(14.910961048888597, -92.26551303684381),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(diecinueve)));
 
-    //// RUTA 21 de aqui
+    ///// RUTA 20
+    Marker markerIEnero = Marker(
+      markerId: const MarkerId('markerIdaRUTA20'),
+      position: const LatLng(14.878079253627012, -92.25557407942205),
+      infoWindow:
+          InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veinte)),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => FutureBuilder(
+            future: getUserData(
+                "xFmwqMKWMYZ9IGs5HAqeisAZu0P2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text("Error: ${snapshot.error}"),
+                );
+              } else {
+                Map<String, dynamic> userData = snapshot.data ?? {};
+                return Container(
+                  height: 400,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/base_6_enero.png',
+                        width: 300, // Ajusta el ancho según sea necesario
+                        height: 200, // Ajusta la altura según sea necesario
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
+                      Text(
+                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
+        );
+      },
+    );
+    Marker markerREnero = Marker(
+        markerId: const MarkerId('markerRegresoRUTA20'),
+        position: const LatLng(14.911771944646082, -92.26621528208234),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veinte)));
+
+    //// RUTA 21
     Marker markerILomas = Marker(
       markerId: const MarkerId('markerIdaRUTA21'),
       position: const LatLng(14.915760128335334, -92.23903891048877),
@@ -1024,7 +1079,7 @@ class MarkersWidget extends StatelessWidget {
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintiuno)));
 
-    //// RUTA 22
+    //// RUTA 22 ID AQgQsp70fARff5d79pFrBJamQRx1
     Marker markerIColinas = Marker(
       markerId: const MarkerId('markerIdaRUTA22'),
       position: const LatLng(14.931119465346342, -92.24674225981146),
@@ -1036,7 +1091,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "AQgQsp70fARff5d79pFrBJamQRx1"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1081,14 +1136,24 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRColinas = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA22'),
         position: const LatLng(14.912431200770666, -92.26455513546168),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintidos)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA22'),
+      position: const LatLng(14.912431200770666, -92.26455513546168),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintidos)),
+    );
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
-    ///// RUTA 23
+    ///// RUTA 23 ID OWPm4BrvnzdDM5GprI3FxEdKXzF2
     Marker markerIEstacionG = Marker(
+<<<<<<< HEAD
       markerId: const MarkerId('markerIdaRUTA23'),
       position: const LatLng(14.876678878740666, -92.2997825582719),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
@@ -1143,6 +1208,13 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
+=======
+        markerId: const MarkerId('markerIdaRUTA23'),
+        position: const LatLng(14.876678878740666, -92.2997825582719),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veintitres)));
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
     Marker markerREstacionG = Marker(
         markerId: const MarkerId('markerRegresoRUTA23'),
         position: const LatLng(14.912704080556866, -92.2677333594763),
@@ -1150,7 +1222,12 @@ class MarkersWidget extends StatelessWidget {
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintitres)));
 
+<<<<<<< HEAD
     //// RUTa 24
+=======
+    //// RUTa 24  ID 6AA9x4iceVMoPvCsduOtMqGWki83
+
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
     Marker markerIVergel = Marker(
       markerId: const MarkerId('markerIdaRUTA24'),
       position: const LatLng(14.926859866457542, -92.26991807774965),
@@ -1162,7 +1239,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "6AA9x4iceVMoPvCsduOtMqGWki83"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1207,6 +1284,7 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRVergel = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA24'),
         position: const LatLng(14.91565480614814, -92.26524535356685),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
@@ -1219,13 +1297,27 @@ class MarkersWidget extends StatelessWidget {
       markerId: const MarkerId('markerIdaRUTA25'),
       position: const LatLng(14.911497383602342, -92.26578511608048),
       infoWindow: InfoWindow(
+=======
+      markerId: const MarkerId('markerRegresoRUTA24'),
+      position: const LatLng(14.91565480614814, -92.26524535356685),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veinticuatro)),
+    );
+
+    ///// RUTA 25 ID
+    Marker markerILibertad = Marker(
+      markerId: const MarkerId('markerIdaRUTA25'),
+      position: const LatLng(14.911497383602342, -92.26578511608048),
+      infoWindow: InfoWindow(
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
           title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veinticinco)),
       onTap: () {
         showModalBottomSheet(
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "nJjAVyGboaUCyw5pZgsN2CAEsVh2"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1270,13 +1362,22 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRLibertad = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA3'),
         position: const LatLng(14.891930739344135, -92.29756901704991),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(veinticinco)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA3'),
+      position: const LatLng(14.891930739344135, -92.29756901704991),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veinticinco)),
+    );
 
-    ///// RUTA 26
+    ///// RUTA 26 ID
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerRSolidaridad = Marker(
       markerId: const MarkerId('markerRegresoRUTA26'),
       position: const LatLng(14.950402428008362, -92.25401951577824),
@@ -1288,7 +1389,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "6V2CCg88Pbff5afkqj1raJi5Gpx1"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1333,13 +1434,23 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerISoliradidad = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerIdaRUTA26'),
         position: const LatLng(14.911487636284026, -92.26444684386084),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
         infoWindow: InfoWindow(
             title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veintiseis)));
+=======
+      markerId: const MarkerId('markerIdaRUTA26'),
+      position: const LatLng(14.911487636284026, -92.26444684386084),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(veintiseis)),
+    );
 
-    ///// RUTA 27
+    ///// RUTA 27 ID
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerICafetales = Marker(
       markerId: const MarkerId('markerIdaRUTA27'),
       position: const LatLng(14.874447122686213, -92.29833607957244),
@@ -1351,7 +1462,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "QRoCBPTVTkRYZPj8SMwG98ImPUt1"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1396,14 +1507,24 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRCafetales = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA3'),
         position: const LatLng(14.910933980692793, -92.26350430388831),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(veintisiete)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA3'),
+      position: const LatLng(14.910933980692793, -92.26350430388831),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintisiete)),
+    );
 
-    ///// RUTA 28
+    ///// RUTA 28 ID
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerIVegasIzq = Marker(
       markerId: const MarkerId('markerIdaRUTA28'),
       position: const LatLng(14.890752108317402, -92.28375170041973),
@@ -1415,7 +1536,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "Zl9lJec0O4XKzGeBGfy5UeFLoji1"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1460,13 +1581,22 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRVegasIzq = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA28'),
         position: const LatLng(14.912552693521517, -92.26503143785993),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintiocho)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA28'),
+      position: const LatLng(14.912552693521517, -92.26503143785993),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintiocho)),
+    );
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
-    ///// RUTA 29
+    ///// RUTA 29 ID
     Marker markerIVegasDer = Marker(
       markerId: const MarkerId('markerIdaRUTA29'),
       position: const LatLng(14.89365134714328, -92.28222951490548),
@@ -1477,7 +1607,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "1uN3MXOuNsZvJuZO5SYjSvymXvI3"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1522,13 +1652,22 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRVegasDer = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA29'),
         position: const LatLng(14.91254709782167, -92.26503078444301),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(veintinueve)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA29'),
+      position: const LatLng(14.91254709782167, -92.26503078444301),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(veintinueve)),
+    );
 
-    ///// RUTA 30
+    ///// RUTA 30 ID
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerIPorvenir = Marker(
       markerId: const MarkerId('markerIdaRUTA30'),
       position: const LatLng(14.942151746778316, -92.26680781177792),
@@ -1540,7 +1679,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "rQOimfkAFGRMAwHlTaxqjiq8Ce12"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1585,14 +1724,25 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRPorvenir = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA30'),
         position: const LatLng(14.915740303111379, -92.26524009184264),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treinta)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA30'),
+      position: const LatLng(14.915740303111379, -92.26524009184264),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treinta)),
+    );
 
-    ///// RUTA 31
+    ///// RUTA 31 ID VxrAnKorIfVqKlKeTBFvajjvmGQ2
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerIFrancisco = Marker(
+<<<<<<< HEAD
       markerId: const MarkerId('markerIdaRUTA31'),
       position: const LatLng(14.912543675730971, -92.26449286313206),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRose),
@@ -1647,6 +1797,13 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
+=======
+        markerId: const MarkerId('markerIdaRUTA31'),
+        position: const LatLng(14.912543675730971, -92.26449286313206),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRose),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintauno)));
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
     Marker markerRFrancisco = Marker(
         markerId: const MarkerId('markerRegresoRUTA5'),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRose),
@@ -1710,13 +1867,22 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerROctubre = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA32'),
         position: const LatLng(14.915222074962239, -92.26495638271793),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintados)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA32'),
+      position: const LatLng(14.915222074962239, -92.26495638271793),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintados)),
+    );
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
-    ////// RUTA 33
+    ////// RUTA 33 ID
     Marker markerITeofilo = Marker(
       markerId: const MarkerId('markerIdaRUTA33'),
       position: const LatLng(14.87817592299174, -92.27853075729483),
@@ -1728,7 +1894,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "wH0oLHv08xSovzXX3FGikn1UGDF3"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1773,14 +1939,24 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRTeofilio = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA33'),
         position: const LatLng(14.91094473195664, -92.26350558126313),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(treintatres)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA33'),
+      position: const LatLng(14.91094473195664, -92.26350558126313),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintatres)),
+    );
 
-    ///// RUTA 34
+    ///// RUTA 34  ID
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerIConfeti = Marker(
       markerId: const MarkerId('markerIdaRUTA34'),
       position: const LatLng(14.902228879679438, -92.28296140543418),
@@ -1792,7 +1968,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "ktjWgBEOY3VTv4UYk6nn3n56ZFO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1837,32 +2013,36 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRConfeti = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA34'),
         position: const LatLng(14.915726622268053, -92.26523239829439),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(treintacuatro)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA34'),
+      position: const LatLng(14.915726622268053, -92.26523239829439),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintacuatro)),
+    );
 
-    ////// RUTA 35
+    ////// RUTA 35 ID
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerIFebreroSan = Marker(
-        markerId: const MarkerId('markerIdaRUTA35'),
-        position: const LatLng(14.945417641042521, -92.2532321010747),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintacinco)));
-    Marker markerRFebreroSan = Marker(
-      markerId: const MarkerId('markerRegresoRUTA35'),
-      position: const LatLng(14.912568928650966, -92.26505223546101),
+      markerId: const MarkerId('markerIdaRUTA35'),
+      position: const LatLng(14.945417641042521, -92.2532321010747),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
       infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintacinco)),
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintacinco)),
       onTap: () {
         showModalBottomSheet(
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "OFC98WQ36ghsEpaEGDTx245BDEb2"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1906,26 +2086,27 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
+    Marker markerRFebreroSan = Marker(
+      markerId: const MarkerId('markerRegresoRUTA35'),
+      position: const LatLng(14.912568928650966, -92.26505223546101),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintacinco)),
+    );
 
-    ////// RUTA 37
+    ////// RUTA 37 ID
     Marker markerIAmericas = Marker(
-        markerId: const MarkerId('markerIdaRUTA37'),
-        position: const LatLng(14.92838147666123, -92.26184694583675),
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintasiete)));
-    Marker markerRAmericas = Marker(
-      markerId: const MarkerId('markerRegresoRUTA37'),
-      position: const LatLng(14.911938971516017, -92.26488023150213),
+      markerId: const MarkerId('markerIdaRUTA37'),
+      position: const LatLng(14.92838147666123, -92.26184694583675),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
       infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintasiete)),
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintasiete)),
       onTap: () {
         showModalBottomSheet(
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "OYlytKxeiyfChPvljZxnB1jZrD13"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -1969,8 +2150,16 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
+    Marker markerRAmericas = Marker(
+      markerId: const MarkerId('markerRegresoRUTA37'),
+      position: const LatLng(14.911938971516017, -92.26488023150213),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintasiete)),
+    );
 
-    ////// RUTA 38
+    ////// RUTA 38 ID
+
     Marker markerIBonanzaCen = Marker(
       markerId: const MarkerId('markerIdaRUTA38'),
       position: const LatLng(14.900148902404279, -92.24364977720329),
@@ -1982,7 +2171,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "zO0y9JkhDMPaCXoBAFBO4PiCyHI2"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -2027,33 +2216,36 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRBonanzaCen = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA38'),
         position: const LatLng(14.912582936783396, -92.26565057225893),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(treintaocho)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA38'),
+      position: const LatLng(14.912582936783396, -92.26565057225893),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintaocho)),
+    );
 
-    ////// RUTA 39
+    ////// RUTA 39 ID
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
+
     Marker markerILomaLinda = Marker(
-        markerId: const MarkerId('markerIdaRUTA39'),
-        position: const LatLng(14.931889843325756, -92.27664907759764),
-        icon:
-            BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
-        infoWindow: InfoWindow(
-            title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintanueve)));
-    Marker markerRLomaLinda = Marker(
-      markerId: const MarkerId('markerRegresoRUTA39'),
-      position: const LatLng(14.915305267411469, -92.26507612025155),
+      markerId: const MarkerId('markerIdaRUTA39'),
+      position: const LatLng(14.931889843325756, -92.27664907759764),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
       infoWindow: InfoWindow(
-          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintanueve)),
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(treintanueve)),
       onTap: () {
         showModalBottomSheet(
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "4P1ooQsR1EXeagwbg6lNDJZ83kM2"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -2097,8 +2289,15 @@ class MarkersWidget extends StatelessWidget {
         );
       },
     );
+    Marker markerRLomaLinda = Marker(
+      markerId: const MarkerId('markerRegresoRUTA39'),
+      position: const LatLng(14.915305267411469, -92.26507612025155),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(treintanueve)),
+    );
 
-    ///// RUTA 41
+    ///// RUTA 41 ID
     Marker markerIMilenio = Marker(
       markerId: const MarkerId('markerRegresoRUTA41'),
       position: const LatLng(14.908166260221039, -92.26914727297864),
@@ -2110,7 +2309,7 @@ class MarkersWidget extends StatelessWidget {
           context: context,
           builder: (context) => FutureBuilder(
             future: getUserData(
-                "BWqWrlV2QybGuxRIuFMq8O1IzAO2"), // Reemplaza "idDelUsuario" con el ID real del usuario
+                "CaCyLQsxenRmAjJJY2k2yzzUd4F2"), // Reemplaza "idDelUsuario" con el ID real del usuario
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -2155,15 +2354,25 @@ class MarkersWidget extends StatelessWidget {
       },
     );
     Marker markerRMilenio = Marker(
+<<<<<<< HEAD
         markerId: const MarkerId('markerRegresoRUTA41R'),
         position: const LatLng(14.905065444604146, -92.26935903480027),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
         infoWindow: InfoWindow(
             title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentaUno)));
+=======
+      markerId: const MarkerId('markerRegresoRUTA41R'),
+      position: const LatLng(14.905065444604146, -92.26935903480027),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan),
+      infoWindow: InfoWindow(
+          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentaUno)),
+    );
+>>>>>>> 8ed471df9c7e07ad683738c6c9329fdb90b331e9
 
     //HAZTA AQUI
 
-    /////// RUTA 42
+    /////// RUTA 42 ID
+
     Marker markerIRaymundo = Marker(
         markerId: const MarkerId('markerIdaRUTA42'),
         position: const LatLng(14.867608436996724, -92.31542570678378),
@@ -2176,7 +2385,8 @@ class MarkersWidget extends StatelessWidget {
         infoWindow: InfoWindow(
             title: marcadorUno.Ida, snippet: marcadorUno.Ruta(cuarentDos)));
 
-    ////// RUTA 43
+    ////// RUTA 43 ID tsyrlAScZmP0HB1hcMvoIKrs5iw2
+
     Marker markerITecnica = Marker(
         markerId: const MarkerId('markerIdaRUTA43'),
         position: const LatLng(14.911732301338352, -92.26489217505592),
@@ -2189,7 +2399,8 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(cuarentTres)));
 
-    ////// RUTA 44
+    ////// RUTA 44 ID CzgCdkZU9taKUfs7aElDtYzGUl83
+
     Marker markerIZocalo = Marker(
         markerId: const MarkerId('markerIdaRUTA44'),
         position: const LatLng(14.898808585226764, -92.26816802083115),
@@ -2203,7 +2414,8 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(cuarentCuatro)));
 
-    /////// RUTA 45
+    /////// RUTA 45 ID FX4tY6OwCWXDe4Q9w5KnA4PUwBk2
+
     Marker markerIZapata = Marker(
         markerId: const MarkerId('markerIdaRUTA45'),
         position: const LatLng(14.890119393865326, -92.26613108525414),
@@ -2216,7 +2428,8 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(cuarentCinco)));
 
-    ////// RUTA 46
+    ////// RUTA 46 ID zBXiilPWsKhWcwy24xbUBlX0P2z1
+
     Marker markerIAcebo = Marker(
         markerId: const MarkerId('markerIdaRUTA46'),
         position: const LatLng(14.890174911732707, -92.26636199352828),
@@ -2230,7 +2443,7 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(cuarentSeis)));
 
-    ////// RUTA 47
+    ////// RUTA 47  E7wMtIIRaWSKmrT6wSdWbuUdWyt2
     Marker markerIVenustiano = Marker(
         markerId: const MarkerId('markerIdaRUTA47'),
         position: const LatLng(14.884064037515538, -92.24828062922347),
@@ -2260,7 +2473,7 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(cuarentSiete)));
 
-    ///// RUTA 49
+    ///// RUTA 49 4stUPasRrUQtNXJRHohLTGCsc4A2
     Marker markerIUnidad = Marker(
         markerId: const MarkerId('markerIdaRUTA49'),
         position: const LatLng(14.911521204074448, -92.26582914732838),
@@ -2285,6 +2498,7 @@ class MarkersWidget extends StatelessWidget {
             title: marcadorUno.Regreso,
             snippet: marcadorUno.Ruta(cuarentNueve)));
 
+    // FORANEAS
     // RUTA HUIXTLA
     Marker markerHuixtlaIda = Marker(
         markerId: const MarkerId("markerIdaHuixtla"),
@@ -2301,6 +2515,8 @@ class MarkersWidget extends StatelessWidget {
           title: marcadorUno.Regreso,
           snippet: marcadorUno.Ruta(huixtlaK),
         ));
+
+    //// PUERTO MADER
     Marker markerPuertoIda = Marker(
       markerId: const MarkerId("markerIdaPuerto"),
       position: const LatLng(14.912818995797739, -92.26688616321292),
@@ -2315,6 +2531,45 @@ class MarkersWidget extends StatelessWidget {
           title: marcadorUno.Regreso,
           snippet: marcadorUno.Ruta(puerto),
         ));
+
+    // RUTA CACAHOATAN
+    Marker markerIdaCacahoatan = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.913337545057166, -92.2672640228076),
+        infoWindow: InfoWindow(
+            title: "Base de Ida", snippet: "Ruta Foranea Cacahoatan"));
+
+    Marker markerRegresoCacahoatan = Marker(
+        markerId: const MarkerId('marker'),
+        position: const LatLng(14.996250841199759, -92.1644619788005),
+        infoWindow: InfoWindow(
+            title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(cacahoatan)));
+
+    // RUTA TALISMAN
+    Marker markerIdaTalisman = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.913337545057166, -92.2672640228076),
+        infoWindow:
+            InfoWindow(title: "Base de Ida", snippet: "RUTA Foranea Talisman"));
+
+    Marker markerRegreTalisman = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.963313020499001, -92.147759179376),
+        infoWindow: InfoWindow(
+            title: "Base de Regreso", snippet: "RUTA Foranea Talisman"));
+
+    // RUTA TUX CHICO
+    Marker markerIdaTux = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.913337545057166, -92.2672640228076),
+        infoWindow: InfoWindow(
+            title: "Base de Ida", snippet: "RUTA Foranea Tuxtla Chico"));
+
+    Marker markerRegresoTux = const Marker(
+        markerId: MarkerId('marker'),
+        position: LatLng(14.939347714806548, -92.168323808123),
+        infoWindow: InfoWindow(
+            title: "Base de Regreso", snippet: "RUTA Foranea Tuxtla Chico"));
 
     markers.add(markerIX);
     markers.add(markerRX);
@@ -2451,6 +2706,15 @@ class MarkersWidget extends StatelessWidget {
     //
     markers.add(markerPuertoIda);
     markers.add(markerPuertoReg);
+    //
+    markers.add(markerIdaCacahoatan);
+    markers.add(markerRegresoCacahoatan);
+    //
+    markers.add(markerIdaTalisman);
+    markers.add(markerRegreTalisman);
+    //
+    markers.add(markerIdaTux);
+    markers.add(markerRegresoTux);
 
     return markers;
   }

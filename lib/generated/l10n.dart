@@ -100,6 +100,16 @@ class S {
     );
   }
 
+  /// `Ruta Foránea {ruta}`
+  String Foranea(Object ruta) {
+    return Intl.message(
+      'Ruta Foránea $ruta',
+      name: 'Foranea',
+      desc: '',
+      args: [ruta],
+    );
+  }
+
   /// `Ruta Foránea {ruta} Ida`
   String ForaneaI(Object ruta) {
     return Intl.message(
