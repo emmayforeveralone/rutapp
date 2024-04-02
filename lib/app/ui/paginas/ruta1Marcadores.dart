@@ -106,7 +106,7 @@ class MarkersWidget extends StatelessWidget {
                         height: 200, // Ajusta la altura según sea necesario
                       ),
                       const Text("Hora de entrada y salida:"),
-                      const Text("8 am - 10 pm"),
+                      const Text("5 am - 10 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -189,6 +189,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -253,6 +255,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -315,6 +319,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -378,6 +384,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -448,6 +456,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -503,6 +513,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -524,6 +536,7 @@ class MarkersWidget extends StatelessWidget {
         position: const LatLng(14.908411062159404, -92.25733174109645),
         infoWindow: InfoWindow(
             title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(doce)));
+
     /////// RUTA 13
     Marker markerIFramboyanes = Marker(
       markerId: const MarkerId('markerIdaRUTA13'),
@@ -563,6 +576,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -626,6 +641,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -688,6 +705,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -744,6 +763,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -761,7 +782,7 @@ class MarkersWidget extends StatelessWidget {
       },
     );
 
-    ///// RUTA 17  14.868447, -92.286129
+    ///// RUTA 17
     Marker markerIEmiliano = Marker(
         markerId: const MarkerId('markerIdaRUTA17'),
         position: const LatLng(14.885061455356162, -92.2719627500856),
@@ -813,6 +834,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -869,6 +892,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -931,6 +956,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -993,6 +1020,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1055,6 +1084,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1119,6 +1150,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1182,6 +1215,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1248,6 +1283,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1311,6 +1348,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1376,6 +1415,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1440,6 +1481,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1503,6 +1546,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1565,6 +1610,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1627,6 +1674,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1689,6 +1738,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1751,6 +1802,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1814,6 +1867,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1877,6 +1932,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -1940,6 +1997,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -2004,6 +2063,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -2069,6 +2130,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -2132,6 +2195,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
@@ -2196,6 +2261,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
