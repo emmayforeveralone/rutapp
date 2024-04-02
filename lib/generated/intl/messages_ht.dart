@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Foranea": m4,
         "ForaneaI": m5,
         "ForaneaR": m6,
+        "Hora":
+            MessageLookupByLibrary.simpleMessage("Moment antre ak moman soti:"),
         "Ida": MessageLookupByLibrary.simpleMessage("Sortant Baz"),
         "Ingresar": MessageLookupByLibrary.simpleMessage("Antre"),
         "Mapa": MessageLookupByLibrary.simpleMessage("Kat 3D"),

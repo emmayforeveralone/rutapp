@@ -29,6 +29,8 @@
     "Conductor":"Driver",
     "NumCombi":"Combi Number",
 
+    "Hora":"Check-in and check-out time:",
+
     "language": "Language",
     "systemLanguage": "System Language"
 }

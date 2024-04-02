@@ -250,6 +250,16 @@ class S {
     );
   }
 
+  /// `Hora de entrada y salida:`
+  String get Hora {
+    return Intl.message(
+      'Hora de entrada y salida:',
+      name: 'Hora',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Idioma`
   String get language {
     return Intl.message(

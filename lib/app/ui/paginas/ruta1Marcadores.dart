@@ -105,7 +105,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 10 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -189,7 +189,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -251,11 +251,11 @@ class MarkersWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(
-                        'assets/base_5febrero.png',
+                        'assets/6.png',
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -315,11 +315,11 @@ class MarkersWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(
-                        'assets/base_5febrero.png',
+                        'assets/8.png',
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -384,7 +384,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -456,7 +456,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -480,56 +480,6 @@ class MarkersWidget extends StatelessWidget {
       position: const LatLng(14.87200744395737, -92.26052992873105),
       infoWindow:
           InfoWindow(title: marcadorUno.Ida, snippet: marcadorUno.Ruta(doce)),
-      onTap: () {
-        showModalBottomSheet(
-          context: context,
-          builder: (context) => FutureBuilder(
-            future: getUserData(
-                "J7FeZeWFo1OQ0ktgXP7btLUBnSC2"), // Reemplaza "idDelUsuario" con el ID real del usuario
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (snapshot.hasError) {
-                return Center(
-                  child: Text("Error: ${snapshot.error}"),
-                );
-              } else {
-                Map<String, dynamic> userData = snapshot.data ?? {};
-                return Container(
-                  height: 400,
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.9),
-                    borderRadius:
-                        const BorderRadius.vertical(top: Radius.circular(20)),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/base_montenegro.png',
-                        width: 300, // Ajusta el ancho según sea necesario
-                        height: 200, // Ajusta la altura según sea necesario
-                      ),
-                      const Text("Hora de entrada y salida:"),
-                      const Text("5 am - 8 pm"),
-                      const SizedBox(height: 10),
-                      Text(
-                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
-                      Text(
-                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
-                      Text(
-                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
-                    ],
-                  ),
-                );
-              }
-            },
-          ),
-        );
-      },
     );
     Marker markerRJoya = Marker(
         markerId: const MarkerId('markerRegresoRUTA3'),
@@ -576,7 +526,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -608,56 +558,6 @@ class MarkersWidget extends StatelessWidget {
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
       infoWindow: InfoWindow(
           title: marcadorUno.Ida, snippet: marcadorUno.Ruta(catorce)),
-      onTap: () {
-        showModalBottomSheet(
-          context: context,
-          builder: (context) => FutureBuilder(
-            future: getUserData(
-                "ddSECHrD6xeJ7WLQlhQalTUG0zk2"), // Reemplaza "idDelUsuario" con el ID real del usuario
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (snapshot.hasError) {
-                return Center(
-                  child: Text("Error: ${snapshot.error}"),
-                );
-              } else {
-                Map<String, dynamic> userData = snapshot.data ?? {};
-                return Container(
-                  height: 400,
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.9),
-                    borderRadius:
-                        const BorderRadius.vertical(top: Radius.circular(20)),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/base_framboyanes.png',
-                        width: 300, // Ajusta el ancho según sea necesario
-                        height: 200, // Ajusta la altura según sea necesario
-                      ),
-                      const Text("Hora de entrada y salida:"),
-                      const Text("5 am - 8 pm"),
-                      const SizedBox(height: 10),
-                      Text(
-                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
-                      Text(
-                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
-                      Text(
-                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
-                    ],
-                  ),
-                );
-              }
-            },
-          ),
-        );
-      },
     );
     Marker markerRVida = Marker(
         markerId: const MarkerId('markerRegresoRUTA3'),
@@ -705,7 +605,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -763,7 +663,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -794,63 +694,6 @@ class MarkersWidget extends StatelessWidget {
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
       infoWindow: InfoWindow(
           title: marcadorUno.Regreso, snippet: marcadorUno.Ruta(diecisiete)),
-    );
-
-    Marker markerIEmilianoBase = Marker(
-      markerId: const MarkerId('markerIdaRUTA17'),
-      position: const LatLng(14.868447, -92.286129),
-      infoWindow: InfoWindow(
-          title: marcadorUno.Ida, snippet: marcadorUno.Ruta(diecisiete)),
-      onTap: () {
-        showModalBottomSheet(
-          context: context,
-          builder: (context) => FutureBuilder(
-            future: getUserData(
-                "QIBf0aaSTAVMKniy8ZiyCMZfMqk2"), // Reemplaza "idDelUsuario" con el ID real del usuario
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (snapshot.hasError) {
-                return Center(
-                  child: Text("Error: ${snapshot.error}"),
-                );
-              } else {
-                Map<String, dynamic> userData = snapshot.data ?? {};
-                return Container(
-                  height: 400,
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.9),
-                    borderRadius:
-                        const BorderRadius.vertical(top: Radius.circular(20)),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/base_emilianoZapata.png',
-                        width: 300, // Ajusta el ancho según sea necesario
-                        height: 200, // Ajusta la altura según sea necesario
-                      ),
-                      const Text("Hora de entrada y salida:"),
-                      const Text("5 am - 8 pm"),
-                      const SizedBox(height: 10),
-                      Text(
-                          "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
-                      Text(
-                          "${S().Conductor}: ${userData['conductor'] ?? 'No disponible'}"),
-                      Text(
-                          "${S().NumCombi}: ${userData['numeroCombi'] ?? 'No disponible'}"),
-                    ],
-                  ),
-                );
-              }
-            },
-          ),
-        );
-      },
     );
 
     ///// RUTA 18
@@ -892,7 +735,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -956,7 +799,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1020,7 +863,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1084,7 +927,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1150,7 +993,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1215,7 +1058,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1283,7 +1126,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1348,7 +1191,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1415,7 +1258,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1481,7 +1324,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1546,7 +1389,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1610,7 +1453,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1674,7 +1517,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1738,7 +1581,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1802,7 +1645,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1867,7 +1710,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1932,7 +1775,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -1997,7 +1840,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -2059,11 +1902,11 @@ class MarkersWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(
-                        'assets/36.png',
+                        'assets/37.png',
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -2130,7 +1973,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -2195,7 +2038,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -2261,7 +2104,7 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
-                      const Text("Hora de entrada y salida:"),
+                      Text(S().Hora),
                       const Text("5 am - 8 pm"),
                       const SizedBox(height: 10),
                       Text(
@@ -2524,7 +2367,6 @@ class MarkersWidget extends StatelessWidget {
     //
     markers.add(markerIEmiliano);
     markers.add(markerREmiliano);
-    markers.add(markerIEmilianoBase);
     //
     markers.add(markerIPalacios);
     markers.add(markerRPalacios);

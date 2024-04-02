@@ -29,6 +29,8 @@
     "Conductor":"Conducteur",
     "NumCombi":"Numéro de Combi",
 
+    "Hora": "Horaires d'entrée et de sortie :",
+
     "language": "Language",
     "systemLanguage": "System Language"
 }

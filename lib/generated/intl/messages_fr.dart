@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Foranea": m4,
         "ForaneaI": m5,
         "ForaneaR": m6,
+        "Hora": MessageLookupByLibrary.simpleMessage(
+            "Horaires d\'entrée et de sortie :"),
         "Ida": MessageLookupByLibrary.simpleMessage("Base de départ"),
         "Ingresar": MessageLookupByLibrary.simpleMessage("Connexion"),
         "Mapa": MessageLookupByLibrary.simpleMessage("Carte 3D"),
