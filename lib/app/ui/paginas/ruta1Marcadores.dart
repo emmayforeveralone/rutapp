@@ -105,6 +105,8 @@ class MarkersWidget extends StatelessWidget {
                         width: 300, // Ajusta el ancho según sea necesario
                         height: 200, // Ajusta la altura según sea necesario
                       ),
+                      const Text("Hora de entrada y salida:"),
+                      const Text("8 am - 10 pm"),
                       const SizedBox(height: 10),
                       Text(
                           "${S().Placas}: ${userData['placas'] ?? 'No disponible'}"),
