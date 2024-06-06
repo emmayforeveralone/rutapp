@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rutapp/app/ui/paginas/home/home_page.dart';
 import 'package:rutapp/login/login.dart';
-import 'package:rutapp/views/bases_combis_foraneas.dart';
+import 'package:rutapp/views/home_page_foraneas.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -17,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
 
-    final screen = [const HomePage(), const BasesCombi(), const Login()];
+    final screen = [const HomePage(), const HomePageForaneas(), const Login()];
     return Scaffold(
       body: IndexedStack(index: selectedIndex, children: screen),
       bottomNavigationBar: BottomNavigationBar(
@@ -33,12 +33,12 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
               icon: const Icon(Icons.map_outlined),
               activeIcon: const Icon(Icons.map),
-              label: "Mapa",
+              label: "Tapachula",
               backgroundColor: colors.primary),
           BottomNavigationBarItem(
               icon: const Icon(Icons.location_on_outlined),
               activeIcon: const Icon(Icons.location_on),
-              label: "Bases",
+              label: "Foraneas",
               backgroundColor: colors.primary),
           BottomNavigationBarItem(
               icon: const Icon(Icons.account_box_outlined),

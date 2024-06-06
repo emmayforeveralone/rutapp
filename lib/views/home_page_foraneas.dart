@@ -2,19 +2,19 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:rutapp/app/ui/paginas/home/combi.dart';
-import 'package:rutapp/app/ui/paginas/ruta1Marcadores.dart';
+import 'package:rutapp/app/ui/paginas/home/combiForanea.dart';
+import 'package:rutapp/views/bases_combis_foraneas.dart';
 
 import 'package:rutapp/generated/l10n.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePageForaneas extends StatefulWidget {
+  const HomePageForaneas({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageForaneas> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePageForaneas> {
   final Completer<GoogleMapController> _controller = Completer();
   String? _combiSeleccionada;
   S marcadorXochimilco = S();
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                 _combiSeleccionada = newValue;
               });
             },
-            items: listaDeCombis.map((combi) {
+            items: listaDeCombisForaneas.map((combi) {
               return DropdownMenuItem<String>(
                 value: combi.nombre,
                 child: Text(combi.nombre),
@@ -90,13 +90,13 @@ class _HomePageState extends State<HomePage> {
               },
               polylines: <Polyline>{
                 if (_combiSeleccionada != null)
-                  ...listaDeCombis
+                  ...listaDeCombisForaneas
                       .lastWhere((combi) => combi.nombre == _combiSeleccionada,
-                          orElse: () => Combi('', {}))
+                          orElse: () => CombiForaneas('', {}))
                       .ruta,
               },
               markers: {
-                ...MarkersWidget(
+                ...BasesCombi(
                   marcadorXochimilco,
                   context: context,
                 ).createMarkers(),

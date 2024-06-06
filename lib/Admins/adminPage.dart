@@ -3,7 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:rutapp/login/login.dart';
+import 'package:rutapp/views/main_screen.dart';
 
 class AdminXochimilco extends StatefulWidget {
   const AdminXochimilco({super.key});
@@ -165,7 +165,7 @@ class _AdminXochimilcoState extends State<AdminXochimilco> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Login()));
+                              builder: (context) => const MainScreen()));
                     },
                     child: const Text("Cerrar Sesion"))
               ],

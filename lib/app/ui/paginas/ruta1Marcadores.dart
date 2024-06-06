@@ -91,6 +91,7 @@ class MarkersWidget extends StatelessWidget {
                 Map<String, dynamic> userData = snapshot.data ?? {};
                 return Container(
                   height: 400,
+                  width: 400,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.9),
@@ -175,6 +176,7 @@ class MarkersWidget extends StatelessWidget {
                 Map<String, dynamic> userData = snapshot.data ?? {};
                 return Container(
                   height: 400,
+                  width: 400,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.9),

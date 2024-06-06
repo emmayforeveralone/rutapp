@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:rutapp/firebase_options.dart';
 import 'package:rutapp/generated/l10n.dart';
-import 'package:rutapp/login/login.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:rutapp/views/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'RUT-APP',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.green),
-      home: const Login(),
+      theme: ThemeData.light(),
+      home: const MainScreen(),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

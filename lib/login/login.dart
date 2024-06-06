@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                 const SizedBox(height: 10),
                 Text(
                   S().Admin,
-                  style: const TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20, color: Colors.black),
                 ),
                 const SizedBox(
                   width: 160.0,
@@ -69,11 +69,14 @@ class _LoginState extends State<Login> {
                 TextFormField(
                   decoration: InputDecoration(
                     hintText: S().User,
+                    hintStyle: const TextStyle(color: Colors.black),
                     labelText: S().User,
+                    labelStyle: const TextStyle(color: Colors.black),
                     suffixIcon: const Icon(Icons.verified_user_outlined),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0)),
                   ),
+                  style: const TextStyle(color: Colors.black),
                   controller: _emailController,
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -88,10 +91,13 @@ class _LoginState extends State<Login> {
                 TextFormField(
                   decoration: InputDecoration(
                       hintText: S().Pass,
+                      hintStyle: const TextStyle(color: Colors.black),
                       labelText: S().Pass,
+                      labelStyle: const TextStyle(color: Colors.black),
                       suffixIcon: const Icon(Icons.password),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0))),
+                  style: const TextStyle(color: Colors.black),
                   controller: _passwordController,
                   maxLength: 6,
                   obscureText: true,
@@ -123,15 +129,12 @@ class _LoginState extends State<Login> {
                         ));
                       }
                     },
-                    child: Text(S().Ingresar)),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()));
-                    },
-                    child: Text(S().Cliente)),
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                    child: Text(
+                      S().Ingresar,
+                      style: const TextStyle(color: Colors.black),
+                    )),
               ],
             ),
           ),
